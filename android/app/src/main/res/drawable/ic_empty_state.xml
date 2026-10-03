@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp"
+    android:height="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    <!-- Clean, elegant outline of a handcrafted clay pot/vase -->
+    <path
+        android:strokeColor="@color/secondary"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"
+        android:pathData="M36,12 C28,12 26,18 26,20 L46,20 C46,18 44,12 36,12 Z" />
+    <path
+        android:strokeColor="@color/secondary"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"
+        android:pathData="M24,22 C18,30 16,46 26,56 C31,60 41,60 46,56 C56,46 54,30 48,22 Z" />
+    <path
+        android:strokeColor="@color/border"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M28,60 L44,60" />
+    <path
+        android:strokeColor="@color/secondary"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M30,38 C34,42 38,42 42,38" />
+</vector>

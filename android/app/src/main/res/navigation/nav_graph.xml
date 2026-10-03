@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <!-- 1. Splash Screen -->
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.kalaconnect.fragments.SplashFragment"
+        android:label="Splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splash_to_onboarding"
+            app:destination="@id/onboardingFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_to_userTypeSelection"
+            app:destination="@id/userTypeSelectionFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_to_artisanDashboard"
+            app:destination="@id/artisanDashboardFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_to_ngoDashboard"
+            app:destination="@id/ngoDashboardFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_to_customerDashboard"
+            app:destination="@id/customerDashboardFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- 2. Onboarding Screen -->
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.kalaconnect.fragments.OnboardingFragment"
+        android:label="Onboarding"
+        tools:layout="@layout/fragment_onboarding">
+        <action
+            android:id="@+id/action_onboarding_to_userTypeSelection"
+            app:destination="@id/userTypeSelectionFragment"
+            app:popUpTo="@id/onboardingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_onboarding_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/onboardingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- 3. User Type Selection Screen -->
+    <fragment
+        android:id="@+id/userTypeSelectionFragment"
+        android:name="com.kalaconnect.fragments.UserTypeSelectionFragment"
+        android:label="Select Role"
+        tools:layout="@layout/fragment_user_type_selection">
+        <action
+            android:id="@+id/action_userTypeSelection_to_signUp"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_userTypeSelection_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <!-- 4. Login Screen -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.kalaconnect.fragments.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_userTypeSelection"
+            app:destination="@id/userTypeSelectionFragment" />
+        <action
+            android:id="@+id/action_login_to_signUp"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_login_to_artisanDashboard"
+            app:destination="@id/artisanDashboardFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_to_ngoDashboard"
+            app:destination="@id/ngoDashboardFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_to_customerDashboard"
+            app:destination="@id/customerDashboardFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- 5. Sign Up Screen -->
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.kalaconnect.fragments.SignUpFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUp_to_login"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_signUp_to_artisanDashboard"
+            app:destination="@id/artisanDashboardFragment"
+            app:popUpTo="@id/signUpFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signUp_to_ngoDashboard"
+            app:destination="@id/ngoDashboardFragment"
+            app:popUpTo="@id/signUpFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signUp_to_customerDashboard"
+            app:destination="@id/customerDashboardFragment"
+            app:popUpTo="@id/signUpFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Role Destination: Artisan Dashboard -->
+    <fragment
+        android:id="@+id/artisanDashboardFragment"
+        android:name="com.kalaconnect.fragments.ArtisanDashboardFragment"
+        android:label="Artisan Dashboard"
+        tools:layout="@layout/fragment_artisan_dashboard">
+        <action
+            android:id="@+id/action_artisan_logout"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/artisanDashboardFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_artisan_to_addProduct"
+            app:destination="@id/addProductFragment" />
+    </fragment>
+
+    <!-- Artisan Product Creation Destination -->
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.kalaconnect.fragments.AddProductFragment"
+        android:label="Add Product"
+        tools:layout="@layout/fragment_add_product" />
+
+    <!-- Role Destination: NGO Admin Dashboard -->
+    <fragment
+        android:id="@+id/ngoDashboardFragment"
+        android:name="com.kalaconnect.fragments.NgoDashboardFragment"
+        android:label="NGO Dashboard"
+        tools:layout="@layout/fragment_ngo_dashboard">
+        <action
+            android:id="@+id/action_ngo_logout"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/ngoDashboardFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Role Destination: Customer Dashboard -->
+    <fragment
+        android:id="@+id/customerDashboardFragment"
+        android:name="com.kalaconnect.fragments.CustomerDashboardFragment"
+        android:label="Customer Dashboard"
+        tools:layout="@layout/fragment_customer_dashboard">
+        <action
+            android:id="@+id/action_customer_logout"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/customerDashboardFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_customer_to_home"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_customer_to_productDetail"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_customer_to_artisanDetail"
+            app:destination="@id/artisanDetailFragment" />
+        <action
+            android:id="@+id/action_customer_to_explore"
+            app:destination="@id/exploreFragment" />
+    </fragment>
+
+    <!-- Home Screen Destination -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.kalaconnect.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_customerDashboard"
+            app:destination="@id/customerDashboardFragment" />
+        <action
+            android:id="@+id/action_home_to_productDetail"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_home_to_artisanDetail"
+            app:destination="@id/artisanDetailFragment" />
+    </fragment>
+
+    <!-- Explore Screen Destination -->
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.kalaconnect.fragments.ExploreFragment"
+        android:label="Explore Marketplace"
+        tools:layout="@layout/fragment_explore">
+        <action
+            android:id="@+id/action_explore_to_productDetail"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_explore_to_artisanDetail"
+            app:destination="@id/artisanDetailFragment" />
+    </fragment>
+
+    <!-- Product Detail Screen Destination -->
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.kalaconnect.fragments.ProductDetailFragment"
+        android:label="Product Detail"
+        tools:layout="@layout/fragment_product_detail">
+        <action
+            android:id="@+id/action_productDetail_to_artisanDetail"
+            app:destination="@id/artisanDetailFragment" />
+    </fragment>
+
+    <!-- Artisan Detail Screen Destination -->
+    <fragment
+        android:id="@+id/artisanDetailFragment"
+        android:name="com.kalaconnect.fragments.ArtisanDetailFragment"
+        android:label="Artisan Profile"
+        tools:layout="@layout/fragment_artisan_detail">
+        <action
+            android:id="@+id/action_artisanDetail_to_productDetail"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+
+</navigation>

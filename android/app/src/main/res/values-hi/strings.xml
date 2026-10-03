@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand & General -->
+    <string name="app_name">कलाकनेक्ट</string>
+    <string name="tagline">कारीगरों, स्वयं सहायता समूहों और वैश्विक खरीदारों को जोड़ना</string>
+    <string name="namaste">नमस्ते</string>
+    <string name="language">भाषा</string>
+    <string name="settings">सेटिंग्स</string>
+    <string name="settings_language">भाषा / Language</string>
+    <string name="select_language">भाषा चुनें</string>
+    <string name="choose_preferred_language">कलाकनेक्ट के लिए अपनी पसंदीदा भाषा चुनें</string>
+    <string name="language_english">English</string>
+    <string name="language_hindi">हिन्दी (Hindi)</string>
+    <string name="language_marathi">मराठी (Marathi)</string>
+    <string name="language_changed_toast">भाषा सफलतापूर्वक बदली गई</string>
+    <string name="apply">लागू करें</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="save">सहेजें</string>
+    <string name="close">बंद करें</string>
+    <string name="retry">पुनः प्रयास करें</string>
+    <string name="loading">लोड हो रहा है…</string>
+    <string name="search">खोजें</string>
+    <string name="filter">फ़िल्टर</string>
+    <string name="view_all">सभी देखें</string>
+    <string name="submit">जमा करें</string>
+    <string name="delete">हटाएं</string>
+    <string name="edit">संपादित करें</string>
+    <string name="view_details">विवरण देखें</string>
+    <string name="back">पीछे</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नहीं</string>
+    <string name="confirm">पुष्टि करें</string>
+    <string name="optional">वैकल्पिक</string>
+    <string name="in_stock">उपलब्ध है</string>
+    <string name="out_of_stock">स्टॉक समाप्त</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">होम</string>
+    <string name="nav_explore">अन्वेषण</string>
+    <string name="nav_artisans">कारीगर</string>
+    <string name="nav_dashboard">डैशबोर्ड</string>
+    <string name="nav_products">उत्पाद</string>
+    <string name="nav_enquiries">पूछताछ</string>
+    <string name="nav_notifications">सूचनाएं</string>
+    <string name="nav_analytics">एनालिटिक्स</string>
+    <string name="nav_profile">प्रोफ़ाइल</string>
+
+    <!-- Splash & Onboarding -->
+    <string name="splash_loading">शिल्प समुदायों को सशक्त बनाना…</string>
+    <string name="onboarding_skip">छोड़ें</string>
+    <string name="onboarding_next">आगे</string>
+    <string name="onboarding_get_started">शुरू करें</string>
+    <string name="onboarding_title_1">ग्रामीण कारीगरों का सशक्तिकरण</string>
+    <string name="onboarding_desc_1">प्रामाणिक भारतीय पारंपरिक शिल्पों को प्रदर्शित करने के लिए स्वयं सहायता समूहों और शिल्पकारों से सीधे जुड़ें।</string>
+    <string name="onboarding_title_2">एआई-संचालित कैटलॉग</string>
+    <string name="onboarding_desc_2">आकर्षक प्रचार कहानियां, सांस्कृतिक विवरण और बाजार-तैयार कैटलॉग आसानी से तैयार करें।</string>
+    <string name="onboarding_title_3">पारदर्शी समुदाय</string>
+    <string name="onboarding_desc_3">सत्यापित गैर-सरकारी संगठनों के साथ सहयोग करें, बिचौलियों को हटाएं और सीधे ग्राहकों से पूछताछ प्राप्त करें।</string>
+
+    <!-- User Role Selection -->
+    <string name="select_role_title">अपनी भूमिका चुनें</string>
+    <string name="select_role_subtitle">चुनें कि आप कलाकनेक्ट में कैसे भाग लेना चाहते हैं</string>
+    <string name="role_artisan_title">स्वयं सहायता समूह / कारीगर</string>
+    <string name="role_artisan_desc">हस्तनिर्मित शिल्प प्रदर्शित करें, एआई कहानियां बनाएं और सीधे सत्यापित खरीदारों से जुड़ें।</string>
+    <string name="role_ngo_title">एनजीओ / व्यवस्थापक</string>
+    <string name="role_ngo_desc">कारीगर समूहों का समर्थन करें, स्वयं सहायता समूहों का प्रबंधन करें और शिल्प की प्रामाणिकता सत्यापित करें।</string>
+    <string name="role_customer_title">ग्राहक / आगंतुक</string>
+    <string name="role_customer_desc">सत्यापित हस्तनिर्मित क्षेत्रीय कलाकृतियां खोजें और कारीगरों से सीधे संपर्क करें।</string>
+    <string name="btn_continue">आगे बढ़ें</string>
+
+    <!-- Authentication -->
+    <string name="login_title">पुनः स्वागत है</string>
+    <string name="login_subtitle">कलाकनेक्ट में जारी रखने के लिए साइन इन करें</string>
+    <string name="email_label">ईमेल पता</string>
+    <string name="email_hint">अपना ईमेल दर्ज करें</string>
+    <string name="password_label">पासवर्ड</string>
+    <string name="password_hint">अपना पासवर्ड दर्ज करें</string>
+    <string name="btn_login">साइन इन करें</string>
+    <string name="no_account_prompt">खाता नहीं है? </string>
+    <string name="sign_up_link">साइन अप करें</string>
+    <string name="signup_title">खाता बनाएं</string>
+    <string name="signup_subtitle">कलाकनेक्ट कारीगर समुदाय में शामिल हों</string>
+    <string name="full_name_label">पूरा नाम</string>
+    <string name="full_name_hint">अपना पूरा नाम दर्ज करें</string>
+    <string name="phone_label">फ़ोन नंबर</string>
+    <string name="phone_hint">संपर्क नंबर दर्ज करें</string>
+    <string name="craft_type_label">शिल्प विशेषता (वैकल्पिक)</string>
+    <string name="craft_type_hint">उदा., टेराकोटा, मधुबनी, हथकरघा</string>
+    <string name="shg_name_label">स्वयं सहायता समूह / समूह का नाम (वैकल्पिक)</string>
+    <string name="shg_name_hint">उदा., महिला उद्योग स्वयं सहायता समूह</string>
+    <string name="org_name_label">संगठन का नाम (वैकल्पिक)</string>
+    <string name="org_name_hint">उदा., ग्रामीण विकास ट्रस्ट</string>
+    <string name="btn_signup">खाता बनाएं</string>
+    <string name="already_have_account">पहले से खाता है? </string>
+    <string name="login_link">साइन इन करें</string>
+    <string name="btn_logout">लॉग आउट</string>
+    <string name="logout_confirm_msg">क्या आप वाकई लॉग आउट करना चाहते हैं?</string>
+
+    <!-- Errors and Validation -->
+    <string name="err_empty_email">कृपया एक मान्य ईमेल पता दर्ज करें</string>
+    <string name="err_empty_password">पासवर्ड कम से कम 6 अक्षरों का होना चाहिए</string>
+    <string name="err_empty_name">कृपया अपना पूरा नाम दर्ज करें</string>
+    <string name="err_empty_phone">कृपया एक मान्य फ़ोन नंबर दर्ज करें</string>
+    <string name="err_select_role">जारी रखने के लिए कृपया एक भूमिका चुनें</string>
+    <string name="err_network_generic">कलाकनेक्ट सर्वर से कनेक्ट नहीं हो सका। कृपया अपना इंटरनेट जांचें।</string>
+    <string name="err_session_expired">आपका सत्र समाप्त हो गया है। कृपया पुनः साइन इन करें।</string>
+    <string name="err_product_name_required">उत्पाद का नाम आवश्यक है</string>
+    <string name="err_category_required">कृपया एक शिल्प श्रेणी चुनें</string>
+    <string name="err_price_required">कृपया मान्य कीमत दर्ज करें</string>
+    <string name="err_quantity_required">कृपया मात्रा दर्ज करें</string>
+    <string name="err_location_required">उत्पादन स्थान आवश्यक है</string>
+    <string name="err_enquiry_message_required">कृपया अपना संदेश दर्ज करें</string>
+    <string name="err_enquiry_name_required">कृपया अपना नाम दर्ज करें</string>
+    <string name="err_enquiry_contact_required">कृपया फ़ोन नंबर या ईमेल दर्ज करें</string>
+    <string name="err_load_analytics">एनालिटिक्स डेटा लोड करने में असमर्थ</string>
+
+    <!-- Role Dashboards -->
+    <string name="artisan_dashboard_title">कारीगर डैशबोर्ड</string>
+    <string name="artisan_dashboard_welcome">स्वागत है, कारीगर साथी!</string>
+    <string name="artisan_dashboard_subtitle">अपने हस्तनिर्मित उत्पादों, एआई प्रचार और ग्राहकों की पूछताछ का प्रबंधन करें।</string>
+    <string name="ngo_dashboard_title">एनजीओ व्यवस्थापक डैशबोर्ड</string>
+    <string name="ngo_dashboard_welcome">स्वागत है, व्यवस्थापक!</string>
+    <string name="ngo_dashboard_subtitle">कारीगर समूहों की निगरानी करें, गुणवत्ता सत्यापित करें और प्रदर्शनियों का समन्वय करें।</string>
+    <string name="customer_dashboard_title">शिल्प खोजें</string>
+    <string name="customer_dashboard_welcome">कलाकनेक्ट में आपका स्वागत है!</string>
+    <string name="customer_dashboard_subtitle">प्रतिभाशाली भारतीय कारीगरों से सीधे प्रामाणिक हस्तनिर्मित कलाकृतियां देखें।</string>
+
+    <!-- Artisan Profile -->
+    <string name="artisan_profile_title">कारीगर प्रोफ़ाइल</string>
+    <string name="artisan_profile_completion">प्रोफ़ाइल पूर्णता</string>
+    <string name="artisan_profile_complete_hint">खरीदारों और गैर-सरकारी संगठनों का विश्वास बढ़ाने के लिए अपनी प्रोफ़ाइल पूरी करें।</string>
+    <string name="artisan_name">कारीगर का नाम</string>
+    <string name="shg_name">स्वयं सहायता समूह / समूह का नाम</string>
+    <string name="bio_label">जीवनी / शिल्प यात्रा</string>
+    <string name="bio_hint">खरीदारों को अपनी शिल्प यात्रा, परंपरा और कला के बारे में बताएं…</string>
+    <string name="location_details">स्थान विवरण</string>
+    <string name="village_city">गांव / शहर</string>
+    <string name="district">ज़िला</string>
+    <string name="state">राज्य</string>
+    <string name="skills_label">शिल्प कौशल एवं विशेषज्ञता</string>
+    <string name="add_skill">कौशल जोड़ें</string>
+    <string name="experience_years">अनुभव (वर्ष)</string>
+    <string name="contact_preference">पसंदीदा संपर्क माध्यम</string>
+    <string name="contact_phone">फ़ोन कॉल</string>
+    <string name="contact_whatsapp">व्हाट्सएप (WhatsApp)</string>
+    <string name="contact_email">ईमेल</string>
+    <string name="save_profile">प्रोफ़ाइल सहेजें</string>
+    <string name="profile_saved_success">प्रोफ़ाइल सफलतापूर्वक सहेजी गई!</string>
+    <string name="verification_status">सत्यापन स्थिति</string>
+    <string name="status_pending">सत्यापन लंबित</string>
+    <string name="status_approved">सत्यापित कारीगर</string>
+    <string name="status_rejected">पुनरीक्षण आवश्यक</string>
+
+    <!-- Product Creation & AI -->
+    <string name="add_product_title">नया उत्पाद जोड़ें</string>
+    <string name="add_product_subtitle">अपनी हस्तनिर्मित कला को दुनिया के सामने प्रदर्शित करें</string>
+    <string name="product_name_label">उत्पाद का नाम</string>
+    <string name="product_name_hint">उदा., हस्तनिर्मित टेराकोटा फूलदान</string>
+    <string name="category_label">शिल्प श्रेणी</string>
+    <string name="category_hint">श्रेणी चुनें</string>
+    <string name="material_label">प्रयुक्त सामग्री</string>
+    <string name="material_hint">उदा., प्राकृतिक मिट्टी, प्राकृतिक रंग</string>
+    <string name="craft_type_field">शिल्प तकनीक</string>
+    <string name="craft_type_field_hint">उदा., चाक पर निर्मित बर्तन, हाथ की नक्काशी</string>
+    <string name="description_label">उत्पाद विवरण</string>
+    <string name="description_hint">कारीगरी, आकार और पारंपरिक मूल का वर्णन करें…</string>
+    <string name="price_label">कीमत (₹)</string>
+    <string name="price_hint">उदा., 650</string>
+    <string name="quantity_label">उपलब्ध मात्रा</string>
+    <string name="quantity_hint">उदा., 15</string>
+    <string name="location_label">उत्पादन स्थान</string>
+    <string name="location_hint">उदा., गोरखपुर, उत्तर प्रदेश</string>
+    <string name="photos_label">उत्पाद चित्र</string>
+    <string name="add_photos_btn">फ़ोटो जोड़ें</string>
+    <string name="generate_with_ai_btn">एआई से तैयार करें</string>
+    <string name="ai_generating">जेमिनी एआई से कहानी बनाई जा रही है…</string>
+    <string name="ai_notice">एआई द्वारा जनरेट सामग्री — प्रकाशित करने से पहले समीक्षा करें।</string>
+    <string name="ai_description_title">उत्पाद विवरण</string>
+    <string name="ai_caption_title">प्रचार कैप्शन</string>
+    <string name="ai_hashtags_title">अनुशंसित हैशटैग</string>
+    <string name="ai_regenerate_btn">पुनः बनाएं</string>
+    <string name="ai_use_content_btn">सामग्री का उपयोग करें</string>
+    <string name="publish_product_btn">उत्पाद प्रकाशित करें</string>
+    <string name="save_draft_btn">ड्राफ्ट के रूप में सहेजें</string>
+    <string name="product_saved_success">उत्पाद सफलतापूर्वक बनाया गया!</string>
+    <string name="product_updated_success">उत्पाद सफलतापूर्वक अपडेट किया गया!</string>
+
+    <!-- My Products -->
+    <string name="my_products_title">मेरे उत्पाद</string>
+    <string name="my_products_subtitle">अपने हस्तशिल्प कैटलॉग का प्रबंधन करें</string>
+    <string name="filter_all">सभी</string>
+    <string name="filter_available">उपलब्ध</string>
+    <string name="filter_draft">ड्राफ्ट</string>
+    <string name="filter_sold_out">बिक चुका</string>
+    <string name="no_products_title">कोई उत्पाद नहीं मिला</string>
+    <string name="no_products_desc">दुनिया भर के ग्राहकों के लिए अपने हस्तशिल्प प्रदर्शित करना शुरू करें।</string>
+    <string name="action_publish">प्रकाशित करें</string>
+    <string name="action_unpublish">अप्रकाशित करें</string>
+    <string name="action_edit">उत्पाद संपादित करें</string>
+    <string name="action_delete">उत्पाद हटाएं</string>
+    <string name="action_view">विवरण देखें</string>
+    <string name="views_count">देखा गया</string>
+    <string name="enquiries_count">पूछताछ</string>
+    <string name="delete_product_confirm">क्या आप वाकई इस उत्पाद को हटाना चाहते हैं?</string>
+
+    <!-- Customer Home & Explore -->
+    <string name="customer_home_greeting">कारीगरों से सीधे प्रामाणिक भारतीय पारंपरिक शिल्प खोजें</string>
+    <string name="search_crafts_hint">शिल्प, कारीगर, क्लस्टर खोजें…</string>
+    <string name="craft_categories_title">शिल्प श्रेणियां</string>
+    <string name="featured_products_title">प्रमुख उत्पाद</string>
+    <string name="featured_artisans_title">प्रमुख कारीगर</string>
+    <string name="explore_title">पारंपरिक शिल्प अन्वेषण</string>
+    <string name="tab_products">उत्पाद</string>
+    <string name="tab_artisans">कारीगर</string>
+    <string name="filter_price_range">कीमत सीमा</string>
+    <string name="filter_min_price">न्यूनतम कीमत (₹)</string>
+    <string name="filter_max_price">अधिकतम कीमत (₹)</string>
+    <string name="apply_filters">फ़िल्टर लागू करें</string>
+    <string name="reset_filters">रीसेट करें</string>
+    <string name="crafted_by">द्वारा निर्मित</string>
+    <string name="shg_collective">स्वयं सहायता समूह</string>
+    <string name="send_enquiry_btn">पूछताछ भेजें</string>
+    <string name="send_enquiry_title">कारीगर को पूछताछ भेजें</string>
+    <string name="send_enquiry_subtitle">सीधे शिल्पकार से संपर्क करें</string>
+    <string name="your_name">आपका नाम</string>
+    <string name="your_contact">फ़ोन नंबर या ईमेल</string>
+    <string name="your_message">आपका संदेश</string>
+    <string name="message_hint">उदा., मैं 5 नग खरीदना चाहता हूँ और डिलीवरी के बारे में जानना चाहता हूँ…</string>
+    <string name="enquiry_sent_success">कारीगर को पूछताछ सफलतापूर्वक भेज दी गई!</string>
+    <string name="about_the_artisan">कारीगर के बारे में</string>
+    <string name="heritage_story">सांस्कृतिक एवं शिल्प कहानी</string>
+    <string name="products_by_artisan">इस कारीगर के उत्पाद</string>
+
+    <!-- Enquiries System -->
+    <string name="enquiries_title">ग्राहक पूछताछ</string>
+    <string name="status_all">सभी</string>
+    <string name="status_pending_badge">लंबित</string>
+    <string name="status_contacted_badge">संपर्क किया</string>
+    <string name="status_resolved_badge">समाधानित</string>
+    <string name="status_closed_badge">समाप्त</string>
+    <string name="update_status_btn">स्थिति बदलें</string>
+    <string name="no_enquiries_title">अभी कोई पूछताछ नहीं</string>
+    <string name="no_enquiries_desc">ग्राहकों से आने वाली पूछताछ यहाँ दिखाई देगी।</string>
+    <string name="enquiry_from">प्रेषक:</string>
+    <string name="enquiry_product">उत्पाद:</string>
+    <string name="enquiry_date">दिनांक:</string>
+    <string name="status_updated_success">स्थिति सफलतापूर्वक अपडेट की गई!</string>
+    <string name="select_new_status">नई स्थिति चुनें</string>
+
+    <!-- Notifications -->
+    <string name="notifications_title">सूचनाएं</string>
+    <string name="mark_all_read">सभी पढ़े हुए चिह्नित करें</string>
+    <string name="no_notifications_title">सब कुछ अद्यतन है!</string>
+    <string name="no_notifications_desc">इस समय आपके पास कोई नई सूचना नहीं है।</string>
+
+    <!-- Admin Console -->
+    <string name="admin_overview_title">सामुदायिक प्रभाव अवलोकन</string>
+    <string name="total_shgs">कुल स्वयं सहायता समूह</string>
+    <string name="total_artisans">कुल कारीगर</string>
+    <string name="total_products">कुल उत्पाद</string>
+    <string name="total_enquiries">कुल पूछताछ</string>
+    <string name="pending_approvals">लंबित अनुमोदन</string>
+    <string name="active_artisans">सक्रिय कारीगर</string>
+    <string name="approve_btn">स्वीकृत करें</string>
+    <string name="reject_btn">अस्वीकार करें</string>
+    <string name="approval_reason_label">स्वीकृति / अस्वीकृति टिप्पणी</string>
+    <string name="approval_reason_hint">सत्यापन टिप्पणी दर्ज करें…</string>
+    <string name="artisan_approved_success">कारीगर स्वीकृत और सत्यापित किया गया!</string>
+    <string name="artisan_rejected_success">कारीगर आवेदन अस्वीकार किया गया।</string>
+    <string name="admin_artisan_dir">कारीगर निर्देशिका</string>
+    <string name="admin_product_oversight">उत्पाद निरीक्षण</string>
+    <string name="admin_enquiries_monitor">प्लेटफ़ॉर्म पूछताछ</string>
+
+    <!-- Analytics -->
+    <string name="analytics_title">कलाकनेक्ट एनालिटिक्स</string>
+    <string name="analytics_subtitle">वास्तविक समय हस्तशिल्प क्लस्टर और बाजार मेट्रिक्स</string>
+    <string name="district_reach">जिला पहुंच</string>
+    <string name="products_per_district">प्रति जिला उत्पाद</string>
+    <string name="artisans_per_district">प्रति जिला कारीगर</string>
+    <string name="craft_breakdown">शिल्प व कौशल विवरण</string>
+    <string name="products_by_category">शिल्प श्रेणी अनुसार उत्पाद</string>
+    <string name="skills_low_rep">कम प्रतिनिधित्व वाले शिल्प कौशल</string>
+    <string name="skills_low_rep_sub">कम पंजीकृत कारीगरों वाले पारंपरिक शिल्प</string>
+    <string name="enquiries_demand">पूछताछ व ग्राहक मांग</string>
+    <string name="enquiries_by_product">उत्पाद अनुसार पूछताछ</string>
+    <string name="enquiries_by_artisan">कारीगर अनुसार पूछताछ</string>
+    <string name="focus_growth">फोकस और विकास की आवश्यकता</string>
+    <string name="districts_low_part">कम भागीदारी वाले जिले</string>
+    <string name="districts_low_part_sub">2 या उससे कम पंजीकृत कारीगरों वाले जिले</string>
+    <string name="products_low_views">कम देखे गए उत्पाद</string>
+    <string name="products_low_views_sub">जिन उत्पादों को प्रचार या एआई कैप्शन की आवश्यकता है</string>
+    <string name="inactive_artisans_title">निष्क्रिय कारीगर</string>
+    <string name="inactive_artisans_sub">बिना किसी प्रकाशित उत्पाद के पंजीकृत कारीगर</string>
+    <string name="no_data_available">कोई डेटा उपलब्ध नहीं</string>
+    <string name="calculating_analytics">पोस्टग्रेएसक्यूएल एनालिटिक्स की गणना हो रही है…</string>
+    <string name="all_active_districts_good">सभी सक्रिय जिलों में 3 या उससे अधिक कारीगर हैं</string>
+    <string name="all_skills_balanced">कौशल प्रतिनिधित्व संतुलित है</string>
+    <string name="no_inactive_artisans">कोई निष्क्रिय कारीगर नहीं है। सभी कारीगरों के उत्पाद सूचीबद्ध हैं।</string>
+
+    <!-- Categories -->
+    <string name="category_pottery">मिट्टी के बर्तन</string>
+    <string name="category_embroidery">कढ़ाई</string>
+    <string name="category_weaving">बुनाई</string>
+    <string name="category_painting">चित्रकला</string>
+    <string name="category_jewellery">पारंपरिक आभूषण</string>
+    <string name="category_woodcraft">काष्ठ शिल्प</string>
+    <string name="category_bamboo">बांस शिल्प</string>
+    <string name="category_textiles">वस्त्र शिल्प</string>
+
+    <!-- Dynamic and UI Dialogs / Toasts / Validation Strings -->
+    <string name="save_changes">बदलाव सहेजें</string>
+    <string name="sample_photo_added">नमूना फोटो जोड़ी गई</string>
+    <string name="edit_handcrafted_product">हस्तशिल्प उत्पाद संपादित करें</string>
+    <string name="ai_edit_prompt">आप विवरण, कैप्शन और हैशटैग को सीधे संपादित कर सकते हैं।</string>
+    <string name="enter_product_name_for_ai">एआई सामग्री उत्पन्न करने के लिए पहले उत्पाद का नाम दर्ज करें</string>
+    <string name="please_provide_product_name">कृपया पहले उत्पाद का नाम प्रदान करें।</string>
+    <string name="ai_desc_cannot_be_empty">विवरण खाली नहीं हो सकता</string>
+    <string name="err_description_required">विवरण आवश्यक है</string>
+    <string name="err_price_negative">कीमत नकारात्मक नहीं हो सकती</string>
+    <string name="err_price_invalid">एक मान्य संख्यात्मक कीमत दर्ज करें</string>
+    <string name="ai_content_confirmed_toast">एआई सामग्री की पुष्टि की गई और लागू की गई! प्रकाशित करने से पहले समीक्षा करें।</string>
+    <string name="artisan_status_updated">कारीगर की स्थिति सफलतापूर्वक अपडेट की गई</string>
+    <string name="action_failed">कार्रवाई विफल रही</string>
+    <string name="rejection_reason_required">कृपया अस्वीकृति का कारण बताएं</string>
+    <string name="no_artisans_status">वर्तमान में %1$s स्थिति में कोई कारीगर नहीं है।</string>
+    <string name="no_artisans_search">आपकी खोज से मेल खाने वाला कोई कारीगर नहीं मिला।</string>
+    <string name="dialog_approve_artisan_title">कारीगर को स्वीकृत और प्रमाणित करें</string>
+    <string name="dialog_approve_artisan_subtitle">%1$s (%2$s) को स्वीकृति दें। उनके उत्पाद तुरंत सार्वजनिक बाज़ार में दिखाई देंगे।</string>
+    <string name="btn_approve_profile">प्रोफ़ाइल स्वीकृत करें</string>
+    <string name="dialog_reject_artisan_title">कारीगर आवेदन अस्वीकार करें</string>
+    <string name="dialog_reject_artisan_subtitle">%1$s को अस्वीकार करें। कृपया रचनात्मक प्रतिक्रिया दें ताकि कारीगर को पता चले कि क्या सुधार करना है।</string>
+    <string name="btn_reject_profile">प्रोफ़ाइल अस्वीकार करें</string>
+    <string name="btn_dialog_close">बंद करें</string>
+    <string name="no_buyer_contact">इस खरीदार के लिए कोई संपर्क जानकारी उपलब्ध नहीं है</string>
+    <string name="no_enquiries_status">वर्तमान में %1$s स्थिति में कोई पूछताछ नहीं है।</string>
+    <string name="no_enquiries_recorded">प्रणाली में वर्तमान में कोई खरीदार पूछताछ दर्ज नहीं है।</string>
+    <string name="no_products_found_msg">कोई हस्तशिल्प उत्पाद नहीं मिला।</string>
+    <string name="artisan_collective_default">कारीगर समूह</string>
+    <string name="master_craftsman">मास्टर शिल्पकार</string>
+    <string name="shg_prefix">एसएचजी: %1$s</string>
+    <string name="greeting_namaste">नमस्ते, %1$s!</string>
+    <string name="badge_verified_artisan">सत्यापित कारीगर</string>
+    <string name="badge_pending_verification">एनजीओ सत्यापन लंबित</string>
+    <string name="profile_complete_ready">शानदार! आपकी प्रोफ़ाइल 100% पूर्ण है और एनजीओ सत्यापन के लिए तैयार है।</string>
+    <string name="profile_incomplete_hint">खरीदारों को पूर्ण दृश्यता देने के लिए पहचान, मूल और कौशल के सभी विवरण भरें।</string>
+    <string name="enquiries_empty_artisan_hint">जब खरीदार आपके उत्पादों के बारे में संदेश या कस्टम ऑर्डर पूछताछ भेजेंगे, तो वे यहाँ दिखाई देंगे।</string>
+    <string name="material_label_prefix">सामग्री: %1$s</string>
+    <string name="role_prefix">भूमिका: %1$s</string>
+    <string name="ngo_admin_restricted_error">एनजीओ प्रशासक के रूप में स्व-पंजीकरण प्रतिबंधित है। कृपया कारीगर या ग्राहक के रूप में पंजीकरण करें।</string>
+    <string name="welcome_kalaconnect_toast">कलाकनेक्ट में आपका स्वागत है!</string>
+    <string name="account_created_success">खाता सफलतापूर्वक बनाया गया! कलाकनेक्ट में आपका स्वागत है।</string>
+    <string name="profile_photo_updated">प्रोफ़ाइल फोटो अपडेट किया गया</string>
+    <string name="artisan_profile_updated_toast">कारीगर प्रोफ़ाइल सफलतापूर्वक अपडेट की गई!</string>
+    <string name="product_removed_toast">उत्पाद कैटलॉग से हटा दिया गया</string>
+    <string name="delete_product_title">उत्पाद हटाएं?</string>
+    <string name="delete_product_named_confirm">क्या आप वाकई \"%1$s\" को अपने कैटलॉग से हटाना चाहते हैं? इसे पूर्ववत नहीं किया जा सकता।</string>
+    <string name="enquiry_sent_buyer_success">कारीगर को पूछताछ सफलतापूर्वक भेजी गई!</string>
+    <string name="enquiry_send_failed">पूछताछ भेजने में विफल</string>
+    <string name="dialog_institutional_account_title">संस्थागत खाता</string>
+    <string name="dialog_institutional_account_desc">एनजीओ प्रशासक खाते स्वयं पंजीकृत नहीं किए जा सकते। उन्हें कलाकनेक्ट की आधिकारिक सत्यापन प्रक्रिया के माध्यम से प्रावधान और अनुमोदित किया जाना चाहिए। आप कारीगर या ग्राहक के रूप में साइन अप कर सकते हैं।</string>
+    <string name="dialog_understood">समझ गया</string>
+    <string name="connect_with_buyer">%1$s से संपर्क करें</string>
+    <string name="failed_load_enquiries">पूछताछ लोड करने में विफल: %1$s</string>
+    <string name="error_updating_status">स्थिति अपडेट करने में त्रुटि: %1$s</string>
+    <string name="enquiry_status_toast">पूछताछ #%1$d स्थिति: %2$s</string>
+    <string name="product_detail_format">श्रेणी: %1$s\nसामग्री: %2$s\nशिल्प प्रकार: %3$s\nकीमत: %4$s\nस्थिति: %5$s\nदृश्य: %6$d\nपूछताछ: %7$d\n\n%8$s</string>
+</resources>

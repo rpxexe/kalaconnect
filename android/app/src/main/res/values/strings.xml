@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand & General -->
+    <string name="app_name">KalaConnect</string>
+    <string name="tagline">Bridging Artisans, NGOs &amp; Global Buyers</string>
+    <string name="namaste">Namaste</string>
+    <string name="language">Language</string>
+    <string name="settings">Settings</string>
+    <string name="settings_language">Language / भाषा</string>
+    <string name="select_language">Select Language</string>
+    <string name="choose_preferred_language">Choose your preferred language for KalaConnect</string>
+    <string name="language_english">English</string>
+    <string name="language_hindi">हिन्दी (Hindi)</string>
+    <string name="language_marathi">मराठी (Marathi)</string>
+    <string name="language_changed_toast">Language updated successfully</string>
+    <string name="apply">Apply</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="close">Close</string>
+    <string name="retry">Retry</string>
+    <string name="loading">Loading…</string>
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
+    <string name="view_all">View All</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="view_details">View Details</string>
+    <string name="back">Back</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="confirm">Confirm</string>
+    <string name="optional">Optional</string>
+    <string name="in_stock">In Stock</string>
+    <string name="out_of_stock">Out of Stock</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_explore">Explore</string>
+    <string name="nav_artisans">Artisans</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_products">Products</string>
+    <string name="nav_enquiries">Enquiries</string>
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_analytics">Analytics</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Splash & Onboarding -->
+    <string name="splash_loading">Empowering craft communities…</string>
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_get_started">Get Started</string>
+    <string name="onboarding_title_1">Empower Rural Artisans</string>
+    <string name="onboarding_desc_1">Connect directly with Self-Help Groups and individual craftspeople to showcase authentic Indian heritage crafts.</string>
+    <string name="onboarding_title_2">AI-Powered Catalogs</string>
+    <string name="onboarding_desc_2">Generate captivating promotional stories, cultural provenance descriptions, and market-ready catalogs effortlessly.</string>
+    <string name="onboarding_title_3">Transparent Community</string>
+    <string name="onboarding_desc_3">Collaborate with verified NGOs, eliminate exploitative middlemen, and receive direct customer enquiries.</string>
+
+    <!-- User Role Selection -->
+    <string name="select_role_title">Select Your Role</string>
+    <string name="select_role_subtitle">Choose how you would like to participate in KalaConnect</string>
+    <string name="role_artisan_title">SHG / Artisan</string>
+    <string name="role_artisan_desc">Showcase handmade crafts, generate AI stories, and connect directly with verified buyers.</string>
+    <string name="role_ngo_title">NGO / Administrator</string>
+    <string name="role_ngo_desc">Support artisan clusters, manage SHG collectives, and verify genuine craftsmanship.</string>
+    <string name="role_customer_title">Customer / Visitor</string>
+    <string name="role_customer_desc">Discover verified handmade regional treasures and enquire directly with artisans.</string>
+    <string name="btn_continue">Continue</string>
+
+    <!-- Authentication -->
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Sign in to continue to KalaConnect</string>
+    <string name="email_label">Email Address</string>
+    <string name="email_hint">Enter your email</string>
+    <string name="password_label">Password</string>
+    <string name="password_hint">Enter your password</string>
+    <string name="btn_login">Sign In</string>
+    <string name="no_account_prompt">Don\'t have an account? </string>
+    <string name="sign_up_link">Sign Up</string>
+    <string name="signup_title">Create Account</string>
+    <string name="signup_subtitle">Join the KalaConnect artisan community</string>
+    <string name="full_name_label">Full Name</string>
+    <string name="full_name_hint">Enter your full name</string>
+    <string name="phone_label">Phone Number</string>
+    <string name="phone_hint">Enter contact number</string>
+    <string name="craft_type_label">Craft Specialty (Optional)</string>
+    <string name="craft_type_hint">e.g., Terracotta, Madhubani, Handloom</string>
+    <string name="shg_name_label">SHG / Collective Name (Optional)</string>
+    <string name="shg_name_hint">e.g., Mahila Udyog SHG</string>
+    <string name="org_name_label">Organization Name (Optional)</string>
+    <string name="org_name_hint">e.g., Rural Development Trust</string>
+    <string name="btn_signup">Create Account</string>
+    <string name="already_have_account">Already have an account? </string>
+    <string name="login_link">Sign In</string>
+    <string name="btn_logout">Logout</string>
+    <string name="logout_confirm_msg">Are you sure you want to log out?</string>
+
+    <!-- Errors and Validation -->
+    <string name="err_empty_email">Please enter a valid email address</string>
+    <string name="err_empty_password">Password must be at least 6 characters</string>
+    <string name="err_empty_name">Please enter your full name</string>
+    <string name="err_empty_phone">Please enter a valid phone number</string>
+    <string name="err_select_role">Please select a role to continue</string>
+    <string name="err_network_generic">Unable to connect to KalaConnect server. Please verify your connection.</string>
+    <string name="err_session_expired">Your session has expired. Please sign in again.</string>
+    <string name="err_product_name_required">Product name is required</string>
+    <string name="err_category_required">Please select a craft category</string>
+    <string name="err_price_required">Please enter a valid price</string>
+    <string name="err_quantity_required">Please enter quantity</string>
+    <string name="err_location_required">Production location is required</string>
+    <string name="err_enquiry_message_required">Please enter your enquiry message</string>
+    <string name="err_enquiry_name_required">Please enter your name</string>
+    <string name="err_enquiry_contact_required">Please enter your phone or email</string>
+    <string name="err_load_analytics">Unable to load analytics data</string>
+
+    <!-- Role Dashboards -->
+    <string name="artisan_dashboard_title">Artisan Dashboard</string>
+    <string name="artisan_dashboard_welcome">Welcome, Artisan!</string>
+    <string name="artisan_dashboard_subtitle">Manage your handcrafted products, AI promotions, and customer enquiries.</string>
+    <string name="ngo_dashboard_title">NGO Admin Dashboard</string>
+    <string name="ngo_dashboard_welcome">Welcome, Administrator!</string>
+    <string name="ngo_dashboard_subtitle">Monitor artisan groups, verify product quality, and coordinate exhibitions.</string>
+    <string name="customer_dashboard_title">Discover Crafts</string>
+    <string name="customer_dashboard_welcome">Welcome to KalaConnect!</string>
+    <string name="customer_dashboard_subtitle">Explore authentic handmade art directly from talented Indian artisans.</string>
+
+    <!-- Artisan Profile -->
+    <string name="artisan_profile_title">Artisan Profile</string>
+    <string name="artisan_profile_completion">Profile Completion</string>
+    <string name="artisan_profile_complete_hint">Complete your profile to build trust with buyers and NGOs.</string>
+    <string name="artisan_name">Artisan Name</string>
+    <string name="shg_name">SHG / Collective Name</string>
+    <string name="bio_label">Biography / Craft Story</string>
+    <string name="bio_hint">Tell buyers about your craft journey, heritage and technique…</string>
+    <string name="location_details">Location Details</string>
+    <string name="village_city">Village / City</string>
+    <string name="district">District</string>
+    <string name="state">State</string>
+    <string name="skills_label">Craft Skills &amp; Specializations</string>
+    <string name="add_skill">Add Skill</string>
+    <string name="experience_years">Years of Experience</string>
+    <string name="contact_preference">Preferred Contact Method</string>
+    <string name="contact_phone">Phone Call</string>
+    <string name="contact_whatsapp">WhatsApp</string>
+    <string name="contact_email">Email</string>
+    <string name="save_profile">Save Profile</string>
+    <string name="profile_saved_success">Profile saved successfully!</string>
+    <string name="verification_status">Verification Status</string>
+    <string name="status_pending">Pending Verification</string>
+    <string name="status_approved">Verified Artisan</string>
+    <string name="status_rejected">Needs Revision</string>
+
+    <!-- Product Creation & AI -->
+    <string name="add_product_title">Add New Product</string>
+    <string name="add_product_subtitle">Showcase your handcrafted treasure to the world</string>
+    <string name="product_name_label">Product Name</string>
+    <string name="product_name_hint">e.g., Handcrafted Terracotta Vase</string>
+    <string name="category_label">Craft Category</string>
+    <string name="category_hint">Select category</string>
+    <string name="material_label">Material Used</string>
+    <string name="material_hint">e.g., Natural Clay, Organic Dyes</string>
+    <string name="craft_type_field">Craft Technique</string>
+    <string name="craft_type_field_hint">e.g., Wheel Thrown Pottery, Hand Embossed</string>
+    <string name="description_label">Product Description</string>
+    <string name="description_hint">Describe craftsmanship, dimensions and traditional origins…</string>
+    <string name="price_label">Price (₹)</string>
+    <string name="price_hint">e.g., 650</string>
+    <string name="quantity_label">Available Quantity</string>
+    <string name="quantity_hint">e.g., 15</string>
+    <string name="location_label">Production Location</string>
+    <string name="location_hint">e.g., Gorakhpur, Uttar Pradesh</string>
+    <string name="photos_label">Product Images</string>
+    <string name="add_photos_btn">Add Photos</string>
+    <string name="generate_with_ai_btn">Generate with AI</string>
+    <string name="ai_generating">Generating story with Gemini AI…</string>
+    <string name="ai_notice">AI-generated content — review before publishing.</string>
+    <string name="ai_description_title">Product Description</string>
+    <string name="ai_caption_title">Promotion Caption</string>
+    <string name="ai_hashtags_title">Recommended Hashtags</string>
+    <string name="ai_regenerate_btn">Regenerate</string>
+    <string name="ai_use_content_btn">Use Content</string>
+    <string name="publish_product_btn">Publish Product</string>
+    <string name="save_draft_btn">Save as Draft</string>
+    <string name="product_saved_success">Product created successfully!</string>
+    <string name="product_updated_success">Product updated successfully!</string>
+
+    <!-- My Products -->
+    <string name="my_products_title">My Products</string>
+    <string name="my_products_subtitle">Manage your handcrafted catalog</string>
+    <string name="filter_all">All</string>
+    <string name="filter_available">Available</string>
+    <string name="filter_draft">Draft</string>
+    <string name="filter_sold_out">Sold Out</string>
+    <string name="no_products_title">No products found</string>
+    <string name="no_products_desc">Start showcasing your handicrafts to customers worldwide.</string>
+    <string name="action_publish">Publish</string>
+    <string name="action_unpublish">Unpublish</string>
+    <string name="action_edit">Edit Product</string>
+    <string name="action_delete">Delete Product</string>
+    <string name="action_view">View Details</string>
+    <string name="views_count">views</string>
+    <string name="enquiries_count">enquiries</string>
+    <string name="delete_product_confirm">Are you sure you want to delete this product?</string>
+
+    <!-- Customer Home & Explore -->
+    <string name="customer_home_greeting">Discover authentic Indian heritage crafts directly from artisans</string>
+    <string name="search_crafts_hint">Search crafts, artisans, clusters…</string>
+    <string name="craft_categories_title">Craft Categories</string>
+    <string name="featured_products_title">Featured Products</string>
+    <string name="featured_artisans_title">Featured Artisans</string>
+    <string name="explore_title">Explore Heritage Crafts</string>
+    <string name="tab_products">Products</string>
+    <string name="tab_artisans">Artisans</string>
+    <string name="filter_price_range">Price Range</string>
+    <string name="filter_min_price">Min Price (₹)</string>
+    <string name="filter_max_price">Max Price (₹)</string>
+    <string name="apply_filters">Apply Filters</string>
+    <string name="reset_filters">Reset</string>
+    <string name="crafted_by">Crafted by</string>
+    <string name="shg_collective">SHG Collective</string>
+    <string name="send_enquiry_btn">Send Enquiry</string>
+    <string name="send_enquiry_title">Send Enquiry to Artisan</string>
+    <string name="send_enquiry_subtitle">Connect directly with the craftsperson</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_contact">Phone Number or Email</string>
+    <string name="your_message">Your Message</string>
+    <string name="message_hint">e.g., I would like to order 5 pieces and know about shipping…</string>
+    <string name="enquiry_sent_success">Enquiry sent to artisan successfully!</string>
+    <string name="about_the_artisan">About the Artisan</string>
+    <string name="heritage_story">Cultural &amp; Craft Story</string>
+    <string name="products_by_artisan">Products by this Artisan</string>
+
+    <!-- Enquiries System -->
+    <string name="enquiries_title">Customer Enquiries</string>
+    <string name="status_all">All</string>
+    <string name="status_pending_badge">Pending</string>
+    <string name="status_contacted_badge">Contacted</string>
+    <string name="status_resolved_badge">Resolved</string>
+    <string name="status_closed_badge">Closed</string>
+    <string name="update_status_btn">Update Status</string>
+    <string name="no_enquiries_title">No enquiries yet</string>
+    <string name="no_enquiries_desc">Customer enquiries will appear here.</string>
+    <string name="enquiry_from">From:</string>
+    <string name="enquiry_product">Product:</string>
+    <string name="enquiry_date">Date:</string>
+    <string name="status_updated_success">Status updated successfully!</string>
+    <string name="select_new_status">Select New Status</string>
+
+    <!-- Notifications -->
+    <string name="notifications_title">Notifications</string>
+    <string name="mark_all_read">Mark all as read</string>
+    <string name="no_notifications_title">All caught up!</string>
+    <string name="no_notifications_desc">You have no new notifications at this time.</string>
+
+    <!-- Admin Console -->
+    <string name="admin_overview_title">Community Impact Overview</string>
+    <string name="total_shgs">Total SHGs</string>
+    <string name="total_artisans">Total Artisans</string>
+    <string name="total_products">Total Products</string>
+    <string name="total_enquiries">Total Enquiries</string>
+    <string name="pending_approvals">Pending Approvals</string>
+    <string name="active_artisans">Active Artisans</string>
+    <string name="approve_btn">Approve</string>
+    <string name="reject_btn">Reject</string>
+    <string name="approval_reason_label">Approval / Rejection Note</string>
+    <string name="approval_reason_hint">Enter verification comments…</string>
+    <string name="artisan_approved_success">Artisan approved and verified!</string>
+    <string name="artisan_rejected_success">Artisan status updated to rejected.</string>
+    <string name="admin_artisan_dir">Artisan Directory</string>
+    <string name="admin_product_oversight">Product Oversight</string>
+    <string name="admin_enquiries_monitor">Platform Enquiries</string>
+
+    <!-- Analytics -->
+    <string name="analytics_title">KalaConnect Analytics</string>
+    <string name="analytics_subtitle">Real-time handicraft cluster and marketplace metrics</string>
+    <string name="district_reach">District Reach</string>
+    <string name="products_per_district">Products per District</string>
+    <string name="artisans_per_district">Artisans per District</string>
+    <string name="craft_breakdown">Craft &amp; Skill Breakdown</string>
+    <string name="products_by_category">Products by Craft Category</string>
+    <string name="skills_low_rep">Skills with Low Representation</string>
+    <string name="skills_low_rep_sub">Traditional crafts with fewest registered artisans</string>
+    <string name="enquiries_demand">Enquiries &amp; Customer Demand</string>
+    <string name="enquiries_by_product">Enquiries by Product</string>
+    <string name="enquiries_by_artisan">Enquiries by Artisan</string>
+    <string name="focus_growth">Focus &amp; Growth Needs</string>
+    <string name="districts_low_part">Districts with Low Participation</string>
+    <string name="districts_low_part_sub">Districts with 2 or fewer registered artisans</string>
+    <string name="products_low_views">Products with Low Views</string>
+    <string name="products_low_views_sub">Products that need marketing or AI promotion</string>
+    <string name="inactive_artisans_title">Inactive Artisans</string>
+    <string name="inactive_artisans_sub">Artisans registered without any published products</string>
+    <string name="no_data_available">No data available</string>
+    <string name="calculating_analytics">Calculating PostgreSQL analytics…</string>
+    <string name="all_active_districts_good">All active districts have 3 or more artisans</string>
+    <string name="all_skills_balanced">Skill representation is balanced</string>
+    <string name="no_inactive_artisans">No inactive artisans. All artisans have products listed.</string>
+
+    <!-- Categories -->
+    <string name="category_pottery">Pottery</string>
+    <string name="category_embroidery">Embroidery</string>
+    <string name="category_weaving">Weaving</string>
+    <string name="category_painting">Painting</string>
+    <string name="category_jewellery">Jewellery</string>
+    <string name="category_woodcraft">Woodcraft</string>
+    <string name="category_bamboo">Bamboo craft</string>
+    <string name="category_textiles">Textile craft</string>
+
+    <!-- Dynamic and UI Dialogs / Toasts / Validation Strings -->
+    <string name="save_changes">Save Changes</string>
+    <string name="sample_photo_added">Sample photo added</string>
+    <string name="edit_handcrafted_product">Edit Handcrafted Product</string>
+    <string name="ai_edit_prompt">You can directly edit the description, caption, and hashtags.</string>
+    <string name="enter_product_name_for_ai">Enter product name first to generate AI content</string>
+    <string name="please_provide_product_name">Please provide a product name first.</string>
+    <string name="ai_desc_cannot_be_empty">Description cannot be empty</string>
+    <string name="err_description_required">Description is required</string>
+    <string name="err_price_negative">Price cannot be negative</string>
+    <string name="err_price_invalid">Enter a valid numerical price</string>
+    <string name="ai_content_confirmed_toast">AI content confirmed and applied! Review before publishing.</string>
+    <string name="artisan_status_updated">Artisan status updated successfully</string>
+    <string name="action_failed">Action failed</string>
+    <string name="rejection_reason_required">Please provide a reason for rejection</string>
+    <string name="no_artisans_status">No artisans currently in %1$s status.</string>
+    <string name="no_artisans_search">No artisans match your search query.</string>
+    <string name="dialog_approve_artisan_title">Approve &amp; Certify Artisan</string>
+    <string name="dialog_approve_artisan_subtitle">Approve %1$s (%2$s). Their products will immediately be visible on the public marketplace.</string>
+    <string name="btn_approve_profile">Approve Profile</string>
+    <string name="dialog_reject_artisan_title">Reject Artisan Application</string>
+    <string name="dialog_reject_artisan_subtitle">Reject %1$s. Please provide constructive feedback so the artisan knows what corrections to make.</string>
+    <string name="btn_reject_profile">Reject Profile</string>
+    <string name="btn_dialog_close">Close</string>
+    <string name="no_buyer_contact">No contact information available for this buyer</string>
+    <string name="no_enquiries_status">No enquiries currently in %1$s status.</string>
+    <string name="no_enquiries_recorded">No buyer enquiries currently recorded in the system.</string>
+    <string name="no_products_found_msg">No handcrafted products found.</string>
+    <string name="artisan_collective_default">Artisan Collective</string>
+    <string name="master_craftsman">Master Craftsman</string>
+    <string name="shg_prefix">SHG: %1$s</string>
+    <string name="greeting_namaste">Namaste, %1$s!</string>
+    <string name="badge_verified_artisan">VERIFIED ARTISAN</string>
+    <string name="badge_pending_verification">PENDING NGO VERIFICATION</string>
+    <string name="profile_complete_ready">Outstanding! Your profile is 100% complete and ready for NGO verification.</string>
+    <string name="profile_incomplete_hint">Complete all identity, provenance and skill fields to unlock full buyer visibility.</string>
+    <string name="enquiries_empty_artisan_hint">When buyers send messages or custom order inquiries about your products, they will appear here.</string>
+    <string name="material_label_prefix">Material: %1$s</string>
+    <string name="role_prefix">Role: %1$s</string>
+    <string name="ngo_admin_restricted_error">Self-registration as NGO Administrator is restricted. Please register as an Artisan or Customer.</string>
+    <string name="welcome_kalaconnect_toast">Welcome to KalaConnect!</string>
+    <string name="account_created_success">Account created successfully! Welcome to KalaConnect.</string>
+    <string name="profile_photo_updated">Profile photo updated</string>
+    <string name="artisan_profile_updated_toast">Artisan profile updated successfully!</string>
+    <string name="product_removed_toast">Product removed from catalogue</string>
+    <string name="delete_product_title">Delete Product?</string>
+    <string name="delete_product_named_confirm">Are you sure you want to remove \"%1$s\" from your catalogue? This cannot be undone.</string>
+    <string name="enquiry_sent_buyer_success">Enquiry sent to the artisan successfully!</string>
+    <string name="enquiry_send_failed">Failed to send enquiry</string>
+    <string name="dialog_institutional_account_title">Institutional Account</string>
+    <string name="dialog_institutional_account_desc">NGO Administrator accounts cannot be self-registered. They must be provisioned and approved through KalaConnect\'s official verification process. You may sign up as an Artisan or Customer.</string>
+    <string name="dialog_understood">Understood</string>
+    <string name="connect_with_buyer">Connect with %1$s</string>
+    <string name="failed_load_enquiries">Failed to load enquiries: %1$s</string>
+    <string name="error_updating_status">Error updating status: %1$s</string>
+    <string name="enquiry_status_toast">Enquiry #%1$d status: %2$s</string>
+    <string name="product_detail_format">Category: %1$s\nMaterial: %2$s\nCraft Type: %3$s\nPrice: %4$s\nStatus: %5$s\nViews: %6$d\nEnquiries: %7$d\n\n%8$s</string>
+</resources>

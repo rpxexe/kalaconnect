@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <!-- Top App Bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface_white"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarArtisanDetail"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_close"
+            app:navigationIconTint="@color/text_primary"
+            app:title="Artisan Profile"
+            app:titleTextAppearance="@style/TextAppearance.KalaConnect.Heading"
+            app:titleTextColor="@color/text_primary" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Artisan Profile Hero Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.KalaConnect.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        app:cardBackgroundColor="@color/surface_variant"
+                        app:cardCornerRadius="44dp"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/ivArtisanDetailPhoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="Artisan Portrait"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_role_artisan" />
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Name and Verified Icon -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvArtisanDetailName"
+                            style="@style/TextAppearance.KalaConnect.Heading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            tools:text="Lakshmi Mahila Collective" />
+
+                        <ImageView
+                            android:id="@+id/ivArtisanDetailVerified"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="6dp"
+                            android:contentDescription="Verified badge"
+                            android:src="@drawable/ic_verified" />
+                    </LinearLayout>
+
+                    <!-- SHG Name -->
+                    <TextView
+                        android:id="@+id/tvArtisanDetailShg"
+                        style="@style/TextAppearance.KalaConnect.Body"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/primary"
+                        tools:text="Shakti Mahila SHG" />
+
+                    <!-- Location -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:contentDescription="Location pin"
+                            android:src="@drawable/ic_location_pin" />
+
+                        <TextView
+                            android:id="@+id/tvArtisanDetailLocation"
+                            style="@style/TextAppearance.KalaConnect.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:textColor="@color/text_secondary"
+                            tools:text="Madhubani, Bihar" />
+                    </LinearLayout>
+
+                    <!-- Experience Badge -->
+                    <TextView
+                        android:id="@+id/tvArtisanDetailExperience"
+                        style="@style/TextAppearance.KalaConnect.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_status_badge_pending"
+                        android:paddingStart="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="3dp"
+                        android:textColor="@color/badge_pending_text"
+                        android:textStyle="bold"
+                        tools:text="14 Years Traditional Experience" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Skills Section -->
+            <TextView
+                style="@style/TextAppearance.KalaConnect.SectionHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Craft Disciplines &amp; Skills"
+                android:textColor="@color/text_primary" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupArtisanSkills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <!-- About Section -->
+            <TextView
+                style="@style/TextAppearance.KalaConnect.SectionHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="About the Artisan"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvArtisanDetailBio"
+                style="@style/TextAppearance.KalaConnect.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/text_secondary"
+                tools:text="A community of master artisans dedicated to preserving traditional handicraft knowledge and empowering local craftswomen." />
+
+            <!-- Creations Section -->
+            <TextView
+                style="@style/TextAppearance.KalaConnect.SectionHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Handcrafted Pieces"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                style="@style/TextAppearance.KalaConnect.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Discover creations made by this artisan collective"
+                android:textColor="@color/text_secondary" />
+
+            <!-- Products RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvArtisanDetailProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:nestedScrollingEnabled="false"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_product_card" />
+
+            <!-- Empty Creations State -->
+            <TextView
+                android:id="@+id/tvArtisanDetailNoProducts"
+                style="@style/TextAppearance.KalaConnect.BodySecondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="No products published yet by this artisan."
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

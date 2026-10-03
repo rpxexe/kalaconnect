@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutSearchBarContainer"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/search_bar_height"
+    android:background="@drawable/bg_search_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingEnd="8dp">
+
+    <ImageView
+        android:id="@+id/ivSearchIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="Search crafts and artisans"
+        android:src="@drawable/ic_search" />
+
+    <EditText
+        android:id="@+id/etSearchInput"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:hint="Search handcrafted treasures…"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint"
+        android:textSize="@dimen/text_body" />
+
+    <ImageButton
+        android:id="@+id/btnFilter"
+        android:layout_width="@dimen/min_touch_target"
+        android:layout_height="@dimen/min_touch_target"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Filter craft categories"
+        android:src="@drawable/ic_filter" />
+
+</LinearLayout>

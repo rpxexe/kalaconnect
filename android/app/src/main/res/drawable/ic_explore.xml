@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Clean line explore / craft showcase icon -->
+    <path
+        android:strokeColor="@color/text_secondary"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"
+        android:pathData="M12,22 C17.523,22 22,17.523 22,12 C22,6.477 17.523,2 12,2 C6.477,2 2,6.477 2,12 C2,17.523 6.477,22 12,22 Z M16.24,7.76 L14.12,14.12 L7.76,16.24 L9.88,9.88 Z" />
+</vector>

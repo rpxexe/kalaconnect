@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutBadgeContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_status_badge_success"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingTop="3dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="3dp">
+
+    <ImageView
+        android:id="@+id/ivBadgeIcon"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:contentDescription="Status indicator"
+        android:src="@drawable/ic_verified" />
+
+    <TextView
+        android:id="@+id/tvBadgeText"
+        style="@style/TextAppearance.KalaConnect.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/badge_verified_text"
+        android:textSize="@dimen/text_caption_small"
+        android:textStyle="bold"
+        tools:text="Verified Artisan" />
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+# Environment and Secret Configurations
+.env
+.env.*
+!.env.example
+*.env
+*.pem
+*.key
+*.pkcs12
+*.p12
+
+# Maven Build Artifacts
+target/
+*.class
+*.jar
+*.war
+*.log
+
+# IDE
+.idea/
+*.iml
+.settings/
+.project
+.classpath

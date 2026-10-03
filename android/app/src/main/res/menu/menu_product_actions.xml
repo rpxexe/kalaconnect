@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_product_view"
+        android:icon="@drawable/ic_visibility"
+        android:title="@string/action_view" />
+
+    <item
+        android:id="@+id/action_product_edit"
+        android:icon="@drawable/ic_edit"
+        android:title="@string/action_edit" />
+
+    <item
+        android:id="@+id/action_product_publish"
+        android:icon="@drawable/ic_check"
+        android:title="@string/action_publish" />
+
+    <item
+        android:id="@+id/action_product_unpublish"
+        android:icon="@drawable/ic_close"
+        android:title="@string/action_unpublish" />
+
+    <item
+        android:id="@+id/action_product_delete"
+        android:icon="@drawable/ic_delete"
+        android:title="@string/action_delete" />
+</menu>

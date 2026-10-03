@@ -1,0 +1,77 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- =====================================================================
+         KalaConnect Application Theme (Night)
+         Warm dark parchment & subdued terracotta
+         ===================================================================== -->
+    <style name="Theme.KalaConnect" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#C89B7B</item>
+        <item name="colorOnPrimary">#292624</item>
+        <item name="colorPrimaryContainer">#5E3929</item>
+        <item name="colorOnPrimaryContainer">#F3EBE6</item>
+
+        <item name="colorSecondary">#C89B7B</item>
+        <item name="colorOnSecondary">#292624</item>
+        <item name="colorSecondaryContainer">#422417</item>
+        <item name="colorOnSecondaryContainer">#F9F4EE</item>
+
+        <item name="android:colorBackground">#1C1A18</item>
+        <item name="colorSurface">#262320</item>
+        <item name="colorSurfaceVariant">#302C28</item>
+        <item name="colorOnSurface">#F4EFEA</item>
+
+        <item name="colorOutline">#453F3A</item>
+        <item name="colorOutlineVariant">#38332E</item>
+
+        <item name="colorError">#D47A7A</item>
+        <item name="colorOnError">#292624</item>
+
+        <item name="android:statusBarColor">#1C1A18</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:navigationBarColor">#1C1A18</item>
+    </style>
+
+    <style name="Widget.KalaConnect.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="cornerRadius">@dimen/corner_radius_medium</item>
+        <item name="backgroundTint">#C89B7B</item>
+        <item name="android:textColor">#292624</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="elevation">@dimen/elevation_none</item>
+    </style>
+
+    <style name="Widget.KalaConnect.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="cornerRadius">@dimen/corner_radius_medium</item>
+        <item name="strokeColor">#453F3A</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textColor">#F4EFEA</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="backgroundTint">#262320</item>
+    </style>
+
+    <style name="Widget.KalaConnect.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">@dimen/corner_radius_card</item>
+        <item name="cardElevation">@dimen/elevation_subtle</item>
+        <item name="cardBackgroundColor">#262320</item>
+        <item name="strokeColor">#453F3A</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Widget.KalaConnect.Card.Subtle" parent="Widget.Material3.CardView.Filled">
+        <item name="cardCornerRadius">@dimen/corner_radius_card</item>
+        <item name="cardElevation">@dimen/elevation_none</item>
+        <item name="cardBackgroundColor">#302C28</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="Widget.KalaConnect.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius_medium</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius_medium</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius_medium</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius_medium</item>
+        <item name="boxStrokeColor">#C89B7B</item>
+        <item name="hintTextColor">#C89B7B</item>
+    </style>
+</resources>

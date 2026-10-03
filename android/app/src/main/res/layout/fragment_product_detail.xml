@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <!-- Top App Bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface_white"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarProductDetail"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_close"
+            app:navigationIconTint="@color/text_primary"
+            app:title="Craft Details"
+            app:titleTextAppearance="@style/TextAppearance.KalaConnect.Heading"
+            app:titleTextColor="@color/text_primary" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="96dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Large Hero Product Image -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.KalaConnect.Card"
+                android:layout_width="match_parent"
+                android:layout_height="280dp">
+
+                <ImageView
+                    android:id="@+id/ivDetailProductImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Product image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_card_image_placeholder" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Product Title -->
+            <TextView
+                android:id="@+id/tvDetailProductName"
+                style="@style/TextAppearance.KalaConnect.Display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/text_primary"
+                tools:text="Terracotta Chai Vessel Set" />
+
+            <!-- Price & Availability Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDetailProductPrice"
+                    style="@style/TextAppearance.KalaConnect.Display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"
+                    tools:text="₹1,450" />
+
+                <!-- Availability Badge -->
+                <TextView
+                    android:id="@+id/tvDetailProductAvailability"
+                    style="@style/TextAppearance.KalaConnect.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:background="@drawable/bg_status_badge_success"
+                    android:paddingStart="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="3dp"
+                    android:textColor="@color/badge_success_text"
+                    android:textStyle="bold"
+                    tools:text="IN STOCK" />
+            </LinearLayout>
+
+            <!-- Tags / Metadata Chips Row -->
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupDetailTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipDetailCategory"
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Pottery" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipDetailCraftType"
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Terracotta" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipDetailLocation"
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:chipIcon="@drawable/ic_location_pin"
+                    tools:text="Gorakhpur, UP" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Material Details -->
+            <TextView
+                android:id="@+id/tvDetailProductMaterial"
+                style="@style/TextAppearance.KalaConnect.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/text_secondary"
+                tools:text="Material: Natural Red Clay with Herbal Finish" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                android:background="@color/border_light" />
+
+            <!-- Description Section -->
+            <TextView
+                style="@style/TextAppearance.KalaConnect.SectionHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Craft Description"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvDetailProductDescription"
+                style="@style/TextAppearance.KalaConnect.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/text_secondary"
+                tools:text="Hand-molded using centuries-old potter's wheel techniques, each vessel in this collection celebrates the rustic beauty of natural Indian terracotta. Fired at low temperatures using organic husks." />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/border_light" />
+
+            <!-- Master Artisan & SHG Card -->
+            <TextView
+                style="@style/TextAppearance.KalaConnect.SectionHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Created by Artisan Collective"
+                android:textColor="@color/text_primary" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDetailArtisan"
+                style="@style/Widget.KalaConnect.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        app:cardBackgroundColor="@color/surface_variant"
+                        app:cardCornerRadius="26dp"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/ivDetailArtisanAvatar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="Artisan avatar"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_role_artisan" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDetailArtisanName"
+                            style="@style/TextAppearance.KalaConnect.Body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            tools:text="Gorakhpur Clay Masters" />
+
+                        <TextView
+                            android:id="@+id/tvDetailArtisanShg"
+                            style="@style/TextAppearance.KalaConnect.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:textColor="@color/primary"
+                            tools:text="SHG Collective • 18 Artisans" />
+
+                        <TextView
+                            android:id="@+id/tvDetailArtisanLocation"
+                            style="@style/TextAppearance.KalaConnect.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:textColor="@color/text_secondary"
+                            tools:text="Gorakhpur, Uttar Pradesh" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="View Profile"
+                        android:src="@drawable/ic_arrow_forward"
+                        app:tint="@color/text_secondary" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- AI Story Caption (If available) -->
+            <LinearLayout
+                android:id="@+id/layoutDetailAiContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_ai_container"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:contentDescription="AI Icon"
+                        android:src="@drawable/ic_auto_awesome"
+                        app:tint="@color/primary" />
+
+                    <TextView
+                        style="@style/TextAppearance.KalaConnect.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="Heritage Story"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvDetailAiCaption"
+                    style="@style/TextAppearance.KalaConnect.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tvDetailAiHashtags"
+                    style="@style/TextAppearance.KalaConnect.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Sticky Bottom CTA: Send Enquiry -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardBackgroundColor="@color/surface_white"
+        app:cardElevation="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="14dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextAppearance.KalaConnect.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Direct from Maker"
+                    android:textColor="@color/text_tertiary" />
+
+                <TextView
+                    android:id="@+id/tvDetailStickyPrice"
+                    style="@style/TextAppearance.KalaConnect.Heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    tools:text="₹1,450" />
+            </LinearLayout>
+
+            <!-- Primary CTA: Send Enquiry -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDetailSendEnquiry"
+                style="@style/Widget.KalaConnect.Button.Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="Send Enquiry"
+                app:icon="@drawable/ic_enquiries"
+                app:iconGravity="textStart"
+                app:iconTint="@color/on_primary" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

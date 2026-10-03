@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutErrorStateContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <ImageView
+        android:id="@+id/ivErrorIllustration"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="Error notification icon"
+        android:src="@drawable/ic_error_state" />
+
+    <TextView
+        android:id="@+id/tvErrorTitle"
+        style="@style/TextAppearance.KalaConnect.SectionHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        tools:text="Unable to Load Creations" />
+
+    <TextView
+        android:id="@+id/tvErrorMessage"
+        style="@style/TextAppearance.KalaConnect.BodySecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        tools:text="We encountered a hiccup connecting to the artisan server. Please try again." />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnErrorRetry"
+        style="@style/Widget.KalaConnect.Button.Secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="20dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="Retry" />
+
+</LinearLayout>

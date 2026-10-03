@@ -1,0 +1,62 @@
+# Environment and Secret Configurations
+.env
+.env.*
+!.env.example
+*.env
+*.pem
+*.key
+*.pkcs12
+*.p12
+*.crt
+*.cert
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Configurations
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Java & Maven Artifacts
+target/
+backend/target/
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Android & Gradle Artifacts
+.gradle/
+build/
+android/build/
+android/app/build/
+android/.gradle/
+android/local.properties
+android/app/local.properties
+*.apk
+*.aab
+*.ap_
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Log files
+*.log
+logs/
+backend/logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
