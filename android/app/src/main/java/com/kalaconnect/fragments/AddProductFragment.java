@@ -30,14 +30,27 @@ import com.kalaconnect.R;
 import com.kalaconnect.adapters.PickedImageAdapter;
 import com.kalaconnect.models.AiProductContentRequest;
 import com.kalaconnect.models.AiProductContentResponse;
+import com.kalaconnect.models.ApiResponse;
 import com.kalaconnect.models.Product;
 import com.kalaconnect.models.ProductRequest;
+import com.kalaconnect.network.ApiClient;
+import com.kalaconnect.network.ApiService;
 import com.kalaconnect.network.NetworkResult;
 import com.kalaconnect.viewmodel.ProductViewModel;
 
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class AddProductFragment extends Fragment {
 
@@ -405,12 +418,144 @@ public class AddProductFragment extends Fragment {
 
         if (!isValid) return;
 
-        List<String> photos = pickedImageAdapter.getPhotos();
-        if (photos.isEmpty()) {
-            // Provide friendly default if artisan hasn't added photo
-            photos.add("https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=500&auto=format&fit=crop");
+        final BigDecimal finalPrice = price;
+        final int finalQuantity = quantity;
+
+        List<String> rawPhotos = pickedImageAdapter.getPhotos();
+        Product dummy = new Product();
+        dummy.setCategory(category);
+        dummy.setCraftType(craftType);
+        dummy.setMaterial(material);
+        dummy.setName(name);
+        String categoryFallback = dummy.getCategoryFallbackImageUrl();
+
+        if (rawPhotos.isEmpty()) {
+            List<String> defaultPhotos = new ArrayList<>();
+            defaultPhotos.add(categoryFallback);
+            executeSubmitProduct(name, category, material, craftType, description, finalPrice, finalQuantity, location, defaultPhotos);
+            return;
         }
 
+        // Upload any local content:// or file:// URIs
+        showLoading(true);
+        uploadPhotosSequentially(rawPhotos, 0, new ArrayList<>(), categoryFallback, uploadedList -> {
+            showLoading(false);
+            executeSubmitProduct(name, category, material, craftType, description, finalPrice, finalQuantity, location, uploadedList);
+        });
+    }
+
+    private interface OnPhotosUploadedListener {
+        void onDone(List<String> finalPhotos);
+    }
+
+    private void uploadPhotosSequentially(List<String> photos, int index, List<String> result, String fallbackUrl, OnPhotosUploadedListener listener) {
+        if (index >= photos.size()) {
+            listener.onDone(result);
+            return;
+        }
+
+        String currentPhoto = photos.get(index);
+        if (currentPhoto == null || currentPhoto.trim().isEmpty()) {
+            result.add(fallbackUrl);
+            uploadPhotosSequentially(photos, index + 1, result, fallbackUrl, listener);
+            return;
+        }
+
+        if (currentPhoto.startsWith("http://") || currentPhoto.startsWith("https://")) {
+            result.add(currentPhoto);
+            uploadPhotosSequentially(photos, index + 1, result, fallbackUrl, listener);
+            return;
+        }
+
+        // Try reading and compressing content URI
+        try {
+            Uri uri = Uri.parse(currentPhoto);
+            byte[] bytes = compressImageUri(uri);
+            if (bytes == null) {
+                InputStream is = requireContext().getContentResolver().openInputStream(uri);
+                if (is != null) {
+                    ByteArrayOutputStream byteBuffer = new ByteArrayOutputStream();
+                    byte[] buffer = new byte[4096];
+                    int len;
+                    while ((len = is.read(buffer)) != -1) {
+                        byteBuffer.write(buffer, 0, len);
+                    }
+                    is.close();
+                    bytes = byteBuffer.toByteArray();
+                }
+            }
+
+            if (bytes == null || bytes.length == 0) {
+                result.add(currentPhoto);
+                uploadPhotosSequentially(photos, index + 1, result, fallbackUrl, listener);
+                return;
+            }
+
+            RequestBody reqFile = RequestBody.create(MediaType.parse("image/jpeg"), bytes);
+            MultipartBody.Part part = MultipartBody.Part.createFormData("file", "photo_" + System.currentTimeMillis() + ".jpg", reqFile);
+
+            ApiService api = ApiClient.getApiService(requireContext());
+            api.uploadImage(part).enqueue(new Callback<ApiResponse<Map<String, String>>>() {
+                @Override
+                public void onResponse(Call<ApiResponse<Map<String, String>>> call, Response<ApiResponse<Map<String, String>>> response) {
+                    if (response.isSuccessful() && response.body() != null && response.body().getData() != null) {
+                        String relativePath = response.body().getData().get("relativePath");
+                        String uploadedUrl = response.body().getData().get("url");
+                        String toUse = (relativePath != null && !relativePath.trim().isEmpty()) ? relativePath.trim() : uploadedUrl;
+                        result.add(toUse != null ? toUse : currentPhoto);
+                    } else {
+                        result.add(currentPhoto);
+                    }
+                    uploadPhotosSequentially(photos, index + 1, result, fallbackUrl, listener);
+                }
+
+                @Override
+                public void onFailure(Call<ApiResponse<Map<String, String>>> call, Throwable t) {
+                    result.add(currentPhoto);
+                    uploadPhotosSequentially(photos, index + 1, result, fallbackUrl, listener);
+                }
+            });
+        } catch (Exception e) {
+            result.add(currentPhoto);
+            uploadPhotosSequentially(photos, index + 1, result, fallbackUrl, listener);
+        }
+    }
+
+    private byte[] compressImageUri(Uri uri) {
+        try {
+            InputStream is = requireContext().getContentResolver().openInputStream(uri);
+            if (is == null) return null;
+            android.graphics.BitmapFactory.Options opts = new android.graphics.BitmapFactory.Options();
+            opts.inJustDecodeBounds = true;
+            android.graphics.BitmapFactory.decodeStream(is, null, opts);
+            is.close();
+
+            int maxDim = 1400;
+            int scale = 1;
+            while (opts.outWidth / scale > maxDim || opts.outHeight / scale > maxDim) {
+                scale *= 2;
+            }
+
+            android.graphics.BitmapFactory.Options loadOpts = new android.graphics.BitmapFactory.Options();
+            loadOpts.inSampleSize = scale;
+            InputStream isLoad = requireContext().getContentResolver().openInputStream(uri);
+            if (isLoad == null) return null;
+            android.graphics.Bitmap bitmap = android.graphics.BitmapFactory.decodeStream(isLoad, null, loadOpts);
+            isLoad.close();
+
+            if (bitmap != null) {
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                bitmap.compress(android.graphics.Bitmap.CompressFormat.JPEG, 82, baos);
+                bitmap.recycle();
+                return baos.toByteArray();
+            }
+        } catch (Exception ignored) {}
+        return null;
+    }
+
+    private void executeSubmitProduct(String name, String category, String material, String craftType,
+                                      String description, BigDecimal price, int quantity, String location,
+                                      List<String> photos) {
         ProductRequest request = new ProductRequest(
                 name,
                 category,

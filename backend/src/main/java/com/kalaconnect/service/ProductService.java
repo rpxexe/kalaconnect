@@ -260,14 +260,29 @@ public class ProductService {
         List<String> photoUrls = new ArrayList<>();
         if (product.getImages() != null && !product.getImages().isEmpty()) {
             for (ProductImage img : product.getImages()) {
-                photoUrls.add(img.getImageUrl());
+                String sanitized = sanitizeImageUrl(img.getImageUrl());
+                if (sanitized != null && !sanitized.isBlank()) {
+                    photoUrls.add(sanitized);
+                }
             }
-            dto.setPrimaryPhoto(product.getImages().get(0).getImageUrl());
+            if (!photoUrls.isEmpty()) {
+                dto.setPrimaryPhoto(photoUrls.get(0));
+            }
         }
         dto.setPhotos(photoUrls);
 
         dto.setCreatedAt(product.getCreatedAt());
         dto.setUpdatedAt(product.getUpdatedAt());
         return dto;
+    }
+
+    private String sanitizeImageUrl(String url) {
+        if (url == null || url.isBlank()) return null;
+        String trimmed = url.trim();
+        if (trimmed.contains("/api/images/")) {
+            int idx = trimmed.indexOf("/api/images/");
+            return trimmed.substring(idx); // Clean relative path: "/api/images/{id}"
+        }
+        return trimmed;
     }
 }

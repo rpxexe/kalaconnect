@@ -142,6 +142,10 @@ public class AuthViewModel extends AndroidViewModel {
         return authManager.getUserEmail();
     }
 
+    public Long getLoggedInUserId() {
+        return authManager.getUserId();
+    }
+
     public boolean isLoggedIn() {
         return authManager.isLoggedIn();
     }

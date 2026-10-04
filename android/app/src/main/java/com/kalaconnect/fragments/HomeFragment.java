@@ -136,6 +136,9 @@ public class HomeFragment extends Fragment {
         productAdapter = new ProductAdapter();
         rvFeaturedProducts.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false));
         rvFeaturedProducts.setAdapter(productAdapter);
+        androidx.recyclerview.widget.LinearSnapHelper snapHelper = new androidx.recyclerview.widget.LinearSnapHelper();
+        rvFeaturedProducts.setOnFlingListener(null);
+        snapHelper.attachToRecyclerView(rvFeaturedProducts);
 
         allProducts.clear();
         allProducts.add(new Product(
@@ -144,7 +147,7 @@ public class HomeFragment extends Fragment {
                 "By Gorakhpur Clay Masters",
                 "₹1,450",
                 "Gorakhpur, UP",
-                R.drawable.ic_craft,
+                "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&auto=format&fit=crop&q=80",
                 "terracotta"
         ));
         allProducts.add(new Product(
@@ -153,7 +156,7 @@ public class HomeFragment extends Fragment {
                 "By Lakshmi Mahila SHG",
                 "₹3,800",
                 "Madhubani, Bihar",
-                R.drawable.ic_kala_logo,
+                "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=800&auto=format&fit=crop&q=80",
                 "madhubani"
         ));
         allProducts.add(new Product(
@@ -162,7 +165,7 @@ public class HomeFragment extends Fragment {
                 "By Odisha Handloom Guild",
                 "₹5,200",
                 "Bargarh, Odisha",
-                R.drawable.ic_craft,
+                "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop&q=80",
                 "handloom"
         ));
         allProducts.add(new Product(
@@ -171,7 +174,7 @@ public class HomeFragment extends Fragment {
                 "By Bastar Tribal Guild",
                 "₹2,750",
                 "Bastar, Chhattisgarh",
-                R.drawable.ic_kala_logo,
+                "https://images.unsplash.com/photo-1590736969955-71cc94801759?w=800&auto=format&fit=crop&q=80",
                 "dhokra"
         ));
         allProducts.add(new Product(
@@ -180,7 +183,7 @@ public class HomeFragment extends Fragment {
                 "By Kashmir Heritage Wood",
                 "₹1,900",
                 "Srinagar, Kashmir",
-                R.drawable.ic_craft,
+                "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&auto=format&fit=crop&q=80",
                 "wood"
         ));
 

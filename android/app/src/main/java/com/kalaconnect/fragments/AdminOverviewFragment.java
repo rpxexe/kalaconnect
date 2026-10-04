@@ -102,6 +102,15 @@ public class AdminOverviewFragment extends Fragment {
             if (navigationListener != null) navigationListener.navigateToTab(3); // Enquiries
         });
 
+        View btnLearning = view.findViewById(R.id.btnQuickManageLearning);
+        if (btnLearning != null) {
+            btnLearning.setOnClickListener(v -> {
+                if (getParentFragment() instanceof NgoDashboardFragment) {
+                    ((NgoDashboardFragment) getParentFragment()).openLearningAndCertificates();
+                }
+            });
+        }
+
         swipeRefresh.setColorSchemeResources(R.color.primary);
         swipeRefresh.setOnRefreshListener(this::loadDashboardMetrics);
 

@@ -86,7 +86,7 @@ public class NgoDashboardFragment extends Fragment {
 
         resetTabs();
 
-        int primaryColor = requireContext().getColor(R.color.primary);
+        int primaryColor = androidx.core.content.ContextCompat.getColor(requireContext(), R.color.primary);
 
         switch (tabIndex) {
             case 1:
@@ -133,8 +133,15 @@ public class NgoDashboardFragment extends Fragment {
                 .commit();
     }
 
+    public void openLearningAndCertificates() {
+        getChildFragmentManager().beginTransaction()
+                .replace(R.id.admin_nav_container, new AdminLearningFragment())
+                .addToBackStack(null)
+                .commit();
+    }
+
     private void resetTabs() {
-        int secondaryColor = requireContext().getColor(R.color.text_secondary);
+        int secondaryColor = androidx.core.content.ContextCompat.getColor(requireContext(), R.color.text_secondary);
 
         ivTabDashboard.setColorFilter(secondaryColor);
         tvTabDashboard.setTextColor(secondaryColor);

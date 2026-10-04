@@ -163,6 +163,7 @@ public class AdminProductsFragment extends Fragment implements AdminProductAdapt
         p1.setArtisanName("Ramesh Kumar");
         p1.setShgName("Varanasi Handloom SHG");
         p1.setDescription("Hand-turned terracotta vase fired using wood-kiln technique with intricate geometric surface carvings.");
+        p1.setPrimaryPhoto("https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&auto=format&fit=crop&q=80");
         demo.add(p1);
 
         Product p2 = new Product();
@@ -179,6 +180,7 @@ public class AdminProductsFragment extends Fragment implements AdminProductAdapt
         p2.setArtisanName("Meera Devi");
         p2.setShgName("Mithila Kala Mandal");
         p2.setDescription("Pure tussar silk handwoven on traditional pit looms featuring natural madder and indigo dyes.");
+        p2.setPrimaryPhoto("https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop&q=80");
         demo.add(p2);
 
         Product p3 = new Product();
@@ -195,6 +197,7 @@ public class AdminProductsFragment extends Fragment implements AdminProductAdapt
         p3.setArtisanName("Sunita Soren");
         p3.setShgName("Dumka Bamboo Collective");
         p3.setDescription("Hand-carved wooden box with brass latch and floral vine relief carvings.");
+        p3.setPrimaryPhoto("https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&auto=format&fit=crop&q=80");
         demo.add(p3);
 
         List<Product> filtered = new ArrayList<>();

@@ -119,21 +119,31 @@ public class AdminProductAdapter extends RecyclerView.Adapter<AdminProductAdapte
             int qty = item.getQuantity() != null ? item.getQuantity() : 0;
             tvAdminProductStock.setText("Qty: " + qty + " units");
 
-            String photoUrl = null;
-            if (item.getPrimaryPhoto() != null && !item.getPrimaryPhoto().isBlank()) {
-                photoUrl = item.getPrimaryPhoto();
-            } else if (item.getPhotos() != null && !item.getPhotos().isEmpty()) {
-                photoUrl = item.getPhotos().get(0);
-            }
+            String photoUrl = item.getPrimaryPhoto();
+            String fallbackUrl = item.getCategoryFallbackImageUrl();
 
-            if (photoUrl != null && !photoUrl.isBlank()) {
+            if (photoUrl != null && !photoUrl.trim().isEmpty()) {
+                Object model = (photoUrl.startsWith("content://") || photoUrl.startsWith("file://"))
+                        ? android.net.Uri.parse(photoUrl)
+                        : photoUrl;
+
                 Glide.with(itemView.getContext())
-                        .load(photoUrl)
+                        .load(model)
+                        .placeholder(R.drawable.bg_card_image_placeholder)
+                        .centerCrop()
+                        .error(
+                                Glide.with(itemView.getContext())
+                                        .load(fallbackUrl)
+                                        .placeholder(R.drawable.bg_card_image_placeholder)
+                                        .centerCrop()
+                        )
+                        .into(ivAdminProductImage);
+            } else {
+                Glide.with(itemView.getContext())
+                        .load(fallbackUrl)
                         .placeholder(R.drawable.bg_card_image_placeholder)
                         .centerCrop()
                         .into(ivAdminProductImage);
-            } else {
-                ivAdminProductImage.setImageResource(R.drawable.bg_card_image_placeholder);
             }
 
             itemView.setOnClickListener(v -> {

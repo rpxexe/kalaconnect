@@ -48,12 +48,14 @@ public class DatabaseMigrationService {
         }
 
         try {
-            logger.info("Applying database migrations from classpath:db/migration/V1__initial_schema.sql...");
-            Resource migrationScript = new ClassPathResource("db/migration/V1__initial_schema.sql");
+            logger.info("Applying database migrations from classpath:db/migration/V1__initial_schema.sql and V2__learning_and_certificates.sql...");
+            Resource migrationScript1 = new ClassPathResource("db/migration/V1__initial_schema.sql");
+            Resource migrationScript2 = new ClassPathResource("db/migration/V2__learning_and_certificates.sql");
             ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
-            populator.setContinueOnError(false);
+            populator.setContinueOnError(true);
             populator.setIgnoreFailedDrops(true);
-            populator.addScript(migrationScript);
+            populator.addScript(migrationScript1);
+            populator.addScript(migrationScript2);
 
             try (Connection connection = dataSource.getConnection()) {
                 populator.populate(connection);

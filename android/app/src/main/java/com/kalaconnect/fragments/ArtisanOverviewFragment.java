@@ -56,6 +56,7 @@ public class ArtisanOverviewFragment extends Fragment {
     private MaterialCardView cardActionAddProduct;
     private MaterialCardView cardActionManageCatalogue;
     private MaterialCardView cardActionEditProfile;
+    private MaterialCardView cardActionLearningHub;
 
     private OnOverviewNavigationListener navListener;
 
@@ -99,6 +100,7 @@ public class ArtisanOverviewFragment extends Fragment {
         cardActionAddProduct = view.findViewById(R.id.cardActionAddProduct);
         cardActionManageCatalogue = view.findViewById(R.id.cardActionManageCatalogue);
         cardActionEditProfile = view.findViewById(R.id.cardActionEditProfile);
+        cardActionLearningHub = view.findViewById(R.id.cardActionLearningHub);
     }
 
     private void initViewModels() {
@@ -177,6 +179,12 @@ public class ArtisanOverviewFragment extends Fragment {
         cardStatEnquiries.setOnClickListener(v -> {
             if (navListener != null) navListener.onNavigateToTab(R.id.nav_artisan_enquiries);
         });
+
+        if (cardActionLearningHub != null) {
+            cardActionLearningHub.setOnClickListener(v -> {
+                if (navListener != null) navListener.onNavigateToTab(R.id.nav_artisan_learning);
+            });
+        }
 
         cardActionAddProduct.setOnClickListener(v -> {
             try {

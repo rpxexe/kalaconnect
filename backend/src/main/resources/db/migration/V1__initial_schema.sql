@@ -203,3 +203,12 @@ CREATE TABLE IF NOT EXISTS analytics_events (
 CREATE INDEX IF NOT EXISTS idx_analytics_events_user_id ON analytics_events(user_id);
 CREATE INDEX IF NOT EXISTS idx_analytics_events_type ON analytics_events(event_type);
 CREATE INDEX IF NOT EXISTS idx_analytics_events_created_at ON analytics_events(created_at);
+
+-- 11. Table: uploaded_images (Persistent cloud database storage for uploaded product & artisan images)
+CREATE TABLE IF NOT EXISTS uploaded_images (
+    id VARCHAR(100) PRIMARY KEY,
+    content_type VARCHAR(100) NOT NULL,
+    data BYTEA NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS idx_uploaded_images_created_at ON uploaded_images(created_at);

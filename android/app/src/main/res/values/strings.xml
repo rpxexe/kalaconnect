@@ -44,6 +44,10 @@
     <string name="nav_notifications">Notifications</string>
     <string name="nav_analytics">Analytics</string>
     <string name="nav_profile">Profile</string>
+    <string name="nav_learning">Learning</string>
+    <string name="artisan_learning_hub">Artisan Learning Hub</string>
+    <string name="kala_vidya_academy">Kala Vidya Academy</string>
+    <string name="study_artisan_knowledge">Study &amp; Knowledge Assessment</string>
 
     <!-- Splash & Onboarding -->
     <string name="splash_loading">Empowering craft communities…</string>

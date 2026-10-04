@@ -97,7 +97,11 @@
                 android:id="@+id/rvCraftCategories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="-20dp"
+                android:layout_marginEnd="-20dp"
                 android:layout_marginTop="12dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
                 android:clipToPadding="false"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -131,12 +135,16 @@
                     android:textSize="14sp" />
             </LinearLayout>
 
-            <!-- Horizontal Featured Products List (Image-First) -->
+            <!-- Horizontal Featured Products Carousel (Smooth edge-to-edge peek) -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvFeaturedProducts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="-20dp"
+                android:layout_marginEnd="-20dp"
                 android:layout_marginTop="12dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
                 android:clipToPadding="false"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -175,7 +183,11 @@
                 android:id="@+id/rvFeaturedArtisans"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="-20dp"
+                android:layout_marginEnd="-20dp"
                 android:layout_marginTop="12dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
                 android:clipToPadding="false"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

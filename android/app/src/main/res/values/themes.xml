@@ -134,7 +134,7 @@
         <item name="boxCornerRadiusTopEnd">@dimen/corner_radius_medium</item>
         <item name="boxCornerRadiusBottomStart">@dimen/corner_radius_medium</item>
         <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius_medium</item>
-        <item name="boxStrokeColor">@color/primary</item>
+        <item name="boxStrokeColor">@color/selector_box_stroke</item>
         <item name="boxStrokeWidth">1dp</item>
         <item name="boxStrokeWidthFocused">1.5dp</item>
         <item name="hintTextColor">@color/primary</item>
@@ -154,18 +154,18 @@
 
     <!-- Top App Bar -->
     <style name="Widget.KalaConnect.TopAppBar" parent="Widget.Material3.Toolbar">
-        <item name="android:background">@color/background</item>
-        <item name="titleTextColor">@color/text_primary</item>
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="titleTextColor">?attr/colorOnSurface</item>
         <item name="subtitleTextColor">@color/text_secondary</item>
-        <item name="navigationIconTint">@color/text_primary</item>
+        <item name="navigationIconTint">?attr/colorOnSurface</item>
         <item name="elevation">@dimen/elevation_none</item>
     </style>
 
     <!-- Bottom Navigation Bar -->
     <style name="Widget.KalaConnect.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
-        <item name="android:background">@color/surface</item>
-        <item name="itemIconTint">@color/text_secondary</item>
-        <item name="itemTextColor">@color/text_secondary</item>
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="itemIconTint">@color/selector_nav_item</item>
+        <item name="itemTextColor">@color/selector_nav_item</item>
         <item name="itemActiveIndicatorStyle">@style/Widget.KalaConnect.BottomNavIndicator</item>
         <item name="elevation">@dimen/elevation_card</item>
     </style>

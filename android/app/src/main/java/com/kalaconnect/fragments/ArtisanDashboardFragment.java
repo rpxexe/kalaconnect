@@ -19,8 +19,8 @@ public class ArtisanDashboardFragment extends Fragment {
 
     private final ArtisanOverviewFragment overviewFragment = new ArtisanOverviewFragment();
     private final MyProductsFragment productsFragment = new MyProductsFragment();
+    private final ArtisanLearningFragment learningFragment = new ArtisanLearningFragment();
     private final EnquiriesFragment enquiriesFragment = new EnquiriesFragment();
-    private final ArtisanNotificationsFragment notificationsFragment = new ArtisanNotificationsFragment();
     private final ArtisanProfileFragment profileFragment = new ArtisanProfileFragment();
 
     @Nullable
@@ -55,10 +55,10 @@ public class ArtisanDashboardFragment extends Fragment {
             selectedFragment = overviewFragment;
         } else if (id == R.id.nav_artisan_products) {
             selectedFragment = productsFragment;
+        } else if (id == R.id.nav_artisan_learning) {
+            selectedFragment = learningFragment;
         } else if (id == R.id.nav_artisan_enquiries) {
             selectedFragment = enquiriesFragment;
-        } else if (id == R.id.nav_artisan_notifications) {
-            selectedFragment = notificationsFragment;
         } else if (id == R.id.nav_artisan_profile) {
             selectedFragment = profileFragment;
         } else {

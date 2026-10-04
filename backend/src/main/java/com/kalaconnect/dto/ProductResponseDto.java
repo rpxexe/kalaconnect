@@ -217,6 +217,16 @@ public class ProductResponseDto {
         this.primaryPhoto = primaryPhoto;
     }
 
+    public String getImageUrl() {
+        return primaryPhoto;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        if (this.primaryPhoto == null || this.primaryPhoto.isEmpty()) {
+            this.primaryPhoto = imageUrl;
+        }
+    }
+
     public OffsetDateTime getCreatedAt() {
         return createdAt;
     }

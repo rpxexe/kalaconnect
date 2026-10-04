@@ -139,17 +139,34 @@ public class MyProductAdapter extends RecyclerView.Adapter<MyProductAdapter.Prod
                 tvMyProductStatus.setTextColor(ContextCompat.getColor(itemView.getContext(), R.color.status_error));
             }
 
-            // Image Thumbnail
+            // Image Thumbnail with resilient category fallback
             String imageUrl = product.getPrimaryPhoto();
-            if (imageUrl != null && !imageUrl.isEmpty()) {
+            String fallbackUrl = product.getCategoryFallbackImageUrl();
+
+            if (imageUrl != null && !imageUrl.trim().isEmpty()) {
+                Object model = (imageUrl.startsWith("content://") || imageUrl.startsWith("file://"))
+                        ? android.net.Uri.parse(imageUrl)
+                        : imageUrl;
+
                 Glide.with(itemView.getContext())
-                        .load(imageUrl)
+                        .load(model)
+                        .transform(new CenterCrop(), new RoundedCorners(24))
+                        .placeholder(R.drawable.bg_card_image_placeholder)
+                        .error(
+                                Glide.with(itemView.getContext())
+                                        .load(fallbackUrl)
+                                        .transform(new CenterCrop(), new RoundedCorners(24))
+                                        .placeholder(R.drawable.bg_card_image_placeholder)
+                                        .error(R.drawable.ic_craft)
+                        )
+                        .into(ivMyProductImage);
+            } else {
+                Glide.with(itemView.getContext())
+                        .load(fallbackUrl)
                         .transform(new CenterCrop(), new RoundedCorners(24))
                         .placeholder(R.drawable.bg_card_image_placeholder)
                         .error(R.drawable.ic_craft)
                         .into(ivMyProductImage);
-            } else {
-                ivMyProductImage.setImageResource(R.drawable.ic_craft);
             }
         }
 

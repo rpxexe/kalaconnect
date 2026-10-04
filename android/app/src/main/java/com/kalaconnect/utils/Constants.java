@@ -7,8 +7,8 @@ public final class Constants {
 
     // 10.0.2.2 points to local machine host from Android emulator.
     // For physical device, change to host machine IP or remote deployed API.
-    public static final String BASE_URL = "https://kalaconnect-eptc.onrender.com/";
-
+    // public static final String BASE_URL = "http://192.168.0.114:8080/";
+public static final String BASE_URL = "https://kalaconnect-eptc.onrender.com/";
     public static final String PREF_NAME = "kalaconnect_prefs";
     public static final String KEY_AUTH_TOKEN = "key_auth_token";
     public static final String KEY_USER_ID = "key_user_id";

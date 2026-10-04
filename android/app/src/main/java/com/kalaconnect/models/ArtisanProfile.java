@@ -92,7 +92,7 @@ public class ArtisanProfile implements Serializable {
     }
 
     public String getProfilePhoto() {
-        return profilePhoto;
+        return Product.resolveImageUrl(profilePhoto);
     }
 
     public void setProfilePhoto(String profilePhoto) {

@@ -44,6 +44,16 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_product_card, parent, false);
+        if (parent instanceof RecyclerView) {
+            RecyclerView.LayoutManager lm = ((RecyclerView) parent).getLayoutManager();
+            if (lm instanceof androidx.recyclerview.widget.GridLayoutManager) {
+                ViewGroup.LayoutParams lp = view.getLayoutParams();
+                if (lp != null) {
+                    lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
+                    view.setLayoutParams(lp);
+                }
+            }
+        }
         return new ProductViewHolder(view);
     }
 
@@ -65,6 +75,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         private final TextView tvProductArtisan;
         private final TextView tvProductPrice;
         private final TextView tvProductLocation;
+        private final TextView tvProductCategory;
 
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -74,6 +85,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             tvProductArtisan = itemView.findViewById(R.id.tvProductArtisan);
             tvProductPrice = itemView.findViewById(R.id.tvProductPrice);
             tvProductLocation = itemView.findViewById(R.id.tvProductLocation);
+            tvProductCategory = itemView.findViewById(R.id.tvProductCategory);
 
             itemView.setOnClickListener(v -> {
                 int position = getAdapterPosition();
@@ -83,7 +95,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             });
 
             btnFavorite.setOnClickListener(v -> {
-                btnFavorite.setSelected(!btnFavorite.isSelected());
+                boolean isFav = !btnFavorite.isSelected();
+                btnFavorite.setSelected(isFav);
+                if (isFav) {
+                    btnFavorite.setImageResource(R.drawable.ic_heart_filled);
+                    btnFavorite.setColorFilter(androidx.core.content.ContextCompat.getColor(itemView.getContext(), R.color.heart_active));
+                } else {
+                    btnFavorite.setImageResource(R.drawable.ic_heart_outline);
+                    btnFavorite.setColorFilter(androidx.core.content.ContextCompat.getColor(itemView.getContext(), R.color.text_secondary));
+                }
             });
         }
 
@@ -95,6 +115,16 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             }
             tvProductArtisan.setText(artisan);
 
+            if (tvProductCategory != null) {
+                String category = product.getCategory();
+                if (category != null && !category.trim().isEmpty()) {
+                    tvProductCategory.setText(category.toUpperCase());
+                    tvProductCategory.setVisibility(View.VISIBLE);
+                } else {
+                    tvProductCategory.setVisibility(View.GONE);
+                }
+            }
+
             String price = product.getPrice();
             if (price != null && !price.trim().isEmpty() && !price.startsWith("₹")) {
                 price = "₹" + price;
@@ -102,22 +132,46 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             tvProductPrice.setText(price != null ? price : "₹0");
             tvProductLocation.setText(product.getLocation() != null ? product.getLocation() : "India");
 
-            // Image-First: Load image with Glide, fallback to vector logo placeholder
-            if (product.getImageUrl() != null && !product.getImageUrl().isEmpty()) {
+            // Image-First: Load image with Glide, fallback to category craft image
+            String imageUrl = product.getImageUrl();
+            String fallbackUrl = product.getCategoryFallbackImageUrl();
+
+            if (imageUrl != null && !imageUrl.trim().isEmpty()) {
+                Object model = (imageUrl.startsWith("content://") || imageUrl.startsWith("file://"))
+                        ? android.net.Uri.parse(imageUrl)
+                        : imageUrl;
+
                 Glide.with(itemView.getContext())
-                        .load(product.getImageUrl())
+                        .load(model)
                         .transform(new CenterCrop(), new RoundedCorners(24))
                         .placeholder(R.drawable.bg_card_image_placeholder)
-                        .error(product.getImageResId() != 0 ? product.getImageResId() : R.drawable.ic_craft)
+                        .error(
+                                Glide.with(itemView.getContext())
+                                        .load(fallbackUrl)
+                                        .transform(new CenterCrop(), new RoundedCorners(24))
+                                        .placeholder(R.drawable.bg_card_image_placeholder)
+                                        .error(product.getImageResId() != 0 ? product.getImageResId() : R.drawable.ic_craft)
+                        )
                         .into(ivProductImage);
             } else if (product.getImageResId() != 0) {
                 Glide.with(itemView.getContext())
                         .load(product.getImageResId())
                         .transform(new CenterCrop(), new RoundedCorners(24))
                         .placeholder(R.drawable.bg_card_image_placeholder)
+                        .error(
+                                Glide.with(itemView.getContext())
+                                        .load(fallbackUrl)
+                                        .transform(new CenterCrop(), new RoundedCorners(24))
+                                        .placeholder(R.drawable.bg_card_image_placeholder)
+                        )
                         .into(ivProductImage);
             } else {
-                ivProductImage.setImageResource(R.drawable.ic_craft);
+                Glide.with(itemView.getContext())
+                        .load(fallbackUrl)
+                        .transform(new CenterCrop(), new RoundedCorners(24))
+                        .placeholder(R.drawable.bg_card_image_placeholder)
+                        .error(R.drawable.ic_craft)
+                        .into(ivProductImage);
             }
         }
     }

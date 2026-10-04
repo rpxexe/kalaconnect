@@ -14,12 +14,15 @@ import com.kalaconnect.models.User;
 import java.util.List;
 import java.util.Map;
 
+import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
+import retrofit2.http.Part;
 import retrofit2.http.Path;
 
 public interface ApiService {
@@ -51,6 +54,11 @@ public interface ApiService {
 
     @GET("api/artisans/skills")
     Call<ApiResponse<List<String>>> getAvailableSkills();
+
+    // Image Upload
+    @Multipart
+    @POST("api/upload/image")
+    Call<ApiResponse<Map<String, String>>> uploadImage(@Part MultipartBody.Part file);
 
     // Products
     @POST("api/products")
@@ -173,4 +181,30 @@ public interface ApiService {
     // Analytics
     @GET("api/analytics")
     Call<ApiResponse<com.kalaconnect.models.AnalyticsData>> getAnalytics();
+
+    // Learning Academy Modules
+    @GET("api/learning/modules")
+    Call<ApiResponse<List<com.kalaconnect.models.LearningModule>>> getLearningModules();
+
+    @POST("api/learning/modules")
+    Call<ApiResponse<com.kalaconnect.models.LearningModule>> createLearningModule(@Body com.kalaconnect.models.LearningModule module);
+
+    @DELETE("api/learning/modules/{id}")
+    Call<ApiResponse<Void>> deleteLearningModule(@Path("id") String id);
+
+    // Artisan Certificates
+    @POST("api/certificates/submit")
+    Call<ApiResponse<com.kalaconnect.models.CertificateItem>> submitCertificate(@Body com.kalaconnect.models.CertificateItem request);
+
+    @GET("api/certificates/my-status")
+    Call<ApiResponse<com.kalaconnect.models.CertificateItem>> getMyCertificateStatus(@retrofit2.http.Query("artisanId") Long artisanId);
+
+    @GET("api/certificates/all")
+    Call<ApiResponse<List<com.kalaconnect.models.CertificateItem>>> getAllCertificates(@retrofit2.http.Query("status") String status);
+
+    @PUT("api/certificates/{id}/approve")
+    Call<ApiResponse<com.kalaconnect.models.CertificateItem>> approveCertificate(@Path("id") Long id);
+
+    @PUT("api/certificates/{id}/reject")
+    Call<ApiResponse<com.kalaconnect.models.CertificateItem>> rejectCertificate(@Path("id") Long id, @Body Map<String, String> body);
 }

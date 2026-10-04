@@ -11,14 +11,14 @@
         android:title="@string/nav_products" />
 
     <item
+        android:id="@+id/nav_artisan_learning"
+        android:icon="@drawable/ic_school"
+        android:title="@string/nav_learning" />
+
+    <item
         android:id="@+id/nav_artisan_enquiries"
         android:icon="@drawable/ic_enquiries"
         android:title="@string/nav_enquiries" />
-
-    <item
-        android:id="@+id/nav_artisan_notifications"
-        android:icon="@drawable/ic_notifications"
-        android:title="@string/nav_notifications" />
 
     <item
         android:id="@+id/nav_artisan_profile"

@@ -197,18 +197,44 @@ public class ProductDetailFragment extends Fragment {
         tvArtisanLocation.setText(p.getLocation() != null ? p.getLocation() : "India");
 
         // Load Images
-        if (p.getImageUrl() != null && !p.getImageUrl().isEmpty()) {
+        String imageUrl = p.getImageUrl();
+        String fallbackUrl = p.getCategoryFallbackImageUrl();
+
+        if (imageUrl != null && !imageUrl.trim().isEmpty()) {
+            Object model = (imageUrl.startsWith("content://") || imageUrl.startsWith("file://"))
+                    ? android.net.Uri.parse(imageUrl)
+                    : imageUrl;
+
             Glide.with(this)
-                    .load(p.getImageUrl())
+                    .load(model)
                     .transform(new CenterCrop(), new RoundedCorners(24))
                     .placeholder(R.drawable.bg_card_image_placeholder)
-                    .error(R.drawable.ic_craft)
+                    .error(
+                            Glide.with(this)
+                                    .load(fallbackUrl)
+                                    .transform(new CenterCrop(), new RoundedCorners(24))
+                                    .placeholder(R.drawable.bg_card_image_placeholder)
+                                    .error(p.getImageResId() != 0 ? p.getImageResId() : R.drawable.ic_craft)
+                    )
                     .into(ivProductImage);
         } else if (p.getImageResId() != 0) {
             Glide.with(this)
                     .load(p.getImageResId())
                     .transform(new CenterCrop(), new RoundedCorners(24))
                     .placeholder(R.drawable.bg_card_image_placeholder)
+                    .error(
+                            Glide.with(this)
+                                    .load(fallbackUrl)
+                                    .transform(new CenterCrop(), new RoundedCorners(24))
+                                    .placeholder(R.drawable.bg_card_image_placeholder)
+                    )
+                    .into(ivProductImage);
+        } else {
+            Glide.with(this)
+                    .load(fallbackUrl)
+                    .transform(new CenterCrop(), new RoundedCorners(24))
+                    .placeholder(R.drawable.bg_card_image_placeholder)
+                    .error(R.drawable.ic_craft)
                     .into(ivProductImage);
         }
 
@@ -271,13 +297,23 @@ public class ProductDetailFragment extends Fragment {
         tvProdArtisan.setText(product.getArtisanName() != null ? "By " + product.getArtisanName() : (product.getShgName() != null ? "By " + product.getShgName() : ""));
         tvProdPrice.setText(product.getPrice() != null && product.getPrice().startsWith("₹") ? product.getPrice() : "₹" + product.getPrice());
 
-        if (product.getImageUrl() != null && !product.getImageUrl().isEmpty()) {
-            Glide.with(this)
-                    .load(product.getImageUrl())
-                    .transform(new CenterCrop(), new RoundedCorners(12))
-                    .placeholder(R.drawable.bg_card_image_placeholder)
-                    .into(ivThumb);
-        }
+        String thumbUrl = product.getImageUrl();
+        String thumbFallback = product.getCategoryFallbackImageUrl();
+        Object thumbModel = (thumbUrl != null && (thumbUrl.startsWith("content://") || thumbUrl.startsWith("file://")))
+                ? android.net.Uri.parse(thumbUrl)
+                : thumbUrl;
+
+        Glide.with(this)
+                .load(thumbModel != null ? thumbModel : thumbFallback)
+                .transform(new CenterCrop(), new RoundedCorners(12))
+                .placeholder(R.drawable.bg_card_image_placeholder)
+                .error(
+                        Glide.with(this)
+                                .load(thumbFallback)
+                                .transform(new CenterCrop(), new RoundedCorners(12))
+                                .placeholder(R.drawable.bg_card_image_placeholder)
+                )
+                .into(ivThumb);
 
         btnClose.setOnClickListener(v -> dialog.dismiss());
         btnCancel.setOnClickListener(v -> dialog.dismiss());
